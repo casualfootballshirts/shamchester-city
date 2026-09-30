@@ -349,7 +349,7 @@
   <div class="wrap">
     <p class="section-label" id="totalHeading">Grand total · principal plus compound interest to today</p>
     <p class="big-total" id="bigTotal" aria-live="polite">£0</p>
-    <p class="big-sub" id="bigSub">Counting up on first load · then live to today’s date</p>
+    <p class="big-sub" id="bigSub"></p>
     <div class="split">
       <div class="tile">
         <div class="k">Principal</div>
@@ -482,6 +482,20 @@
   });
   document.getElementById("metaAsOf").textContent =
     "Interest to " + today.toLocaleDateString("en-GB");
+
+  function ordinal(n) {
+    var v = n % 100;
+    if (v >= 11 && v <= 13) return n + "th";
+    switch (n % 10) {
+      case 1: return n + "st";
+      case 2: return n + "nd";
+      case 3: return n + "rd";
+      default: return n + "th";
+    }
+  }
+  document.getElementById("bigSub").textContent =
+    "As of " + ordinal(today.getDate()) + " " +
+    today.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
 
   var clubs = {};
   rows.forEach(function (r) { clubs[r.club] = true; });
@@ -664,8 +678,7 @@
       else {
         animating = false;
         animDone = true;
-        document.getElementById("bigSub").textContent =
-          "Live total with interest accruing daily at 4% · filter updates instantly";
+
         var s = sums(filtered());
         setTotals(s.p, s.i, s.t);
       }
