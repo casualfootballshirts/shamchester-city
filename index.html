@@ -65,7 +65,7 @@
     padding: 1.25rem 0 0;
   }
   .masthead-top {
-    display: flex; justify-content: space-between; align-items: baseline;
+    display: flex; justify-content: flex-end; align-items: baseline;
     gap: 1rem; flex-wrap: wrap;
     font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
     color: #fff; opacity: 0.95;
@@ -159,7 +159,7 @@
 
   /* Counter */
   #counter {
-    min-height: 180vh;
+    min-height: 700vh;
     padding: 0;
     position: relative;
     background: #6CABDD;
@@ -168,14 +168,28 @@
   .counter-sticky {
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.25rem 1rem 1.75rem;
   }
+  .skip-counter {
+    display: inline-block;
+    margin-top: 1.1rem;
+    padding: 0.55rem 0.95rem;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+  }
+  .skip-counter:hover { background: #fff; color: #1C2C5B; }
   .counter-kicker {
     font-family: var(--mono);
     font-size: 0.75rem;
@@ -666,7 +680,6 @@
 <header class="masthead">
   <div class="wrap">
     <div class="masthead-top">
-      <span>Vol. I · No. 115</span>
       <span>30 September 2026</span>
     </div>
     <div class="masthead-brand">
@@ -718,6 +731,7 @@
     <p class="counter-of" id="chargeOf">of 115 referred · Feb 2023</p>
     <p class="counter-sentence" id="chargeSentence">Scroll through this section. Each tick is one referred charge — or a representative sample of the five categories the League published.</p>
     <p class="counter-hint">Tap or click the number for the rule, the finding, and the source.</p>
+    <a class="skip-counter" href="#timeline">Jump past the counter</a>
     <div class="counter-progress" aria-hidden="true"><i id="chargeBar"></i></div>
   </div>
 </section>
@@ -1044,7 +1058,7 @@
     displayedN = n;
     chargeNumEl.textContent = String(n);
     if (n === 0) {
-      chargeSentenceEl.textContent = "Scroll through this section. The number climbs one referred charge at a time across the five published categories.";
+      chargeSentenceEl.textContent = "Scroll slowly. The number climbs one referred charge at a time across the five published categories. Use Jump past the counter if you want the rest of the page.";
       chargeOf.textContent = "of 115 referred · Feb 2023";
     } else {
       var tick = TICKS[n - 1];
