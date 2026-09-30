@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFEL864LGT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HFEL864LGT');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shamchester City — What the rest of the league could claim</title>
+<meta name="description" content="A satirical hypothetical calculator of invented claims other clubs could make about Manchester City. Illustrative only. Not a real fine, legal claim, or prediction.">
+<style>
+  :root {
+    --sky: #6CABDD;
+    --sky-deep: #1C2C5B;
+    --sky-mid: #3A7CA5;
+    --sky-bright: #A8D4F0;
+    --ink: #1C2C5B;
+    --ink-soft: #2A3F6B;
+    --paper: #FFFFFF;
+    --newsprint: #F0F6FB;
+    --rule: #1C2C5B;
+    --muted: #4A5F7A;
+    --danger: #8b1e1e;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    --condensed: "Arial Narrow", "Helvetica Condensed", "Franklin Gothic Medium", "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1C2C5B; }
+  a:hover { color: #6CABDD; }
+  button, select { font-family: inherit; cursor: pointer; }
+  .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  .masthead {
+    background: linear-gradient(180deg, #6CABDD 0%, #5BA0D4 55%, #4E94C8 100%);
+    color: #fff;
+    border-bottom: 4px solid var(--ink);
+    padding: 1.25rem 0 0;
+  }
+  .masthead-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1rem; flex-wrap: wrap;
+    font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #fff; opacity: 0.95;
+  }
+  .masthead-top .domain { font-weight: 700; letter-spacing: 0.06em; }
+  .masthead-brand {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.85rem; margin: 0.85rem 0 0.5rem;
+  }
+  .logo-roundel {
+    width: clamp(96px, 24vw, 128px);
+    height: auto; display: block;
+    filter: drop-shadow(0 4px 0 rgba(28,44,91,0.25));
+  }
+  .masthead h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 6vw, 3.4rem);
+    font-weight: 700; letter-spacing: -0.02em; line-height: 0.95;
+    margin: 0; text-align: center; color: #fff;
+    text-shadow: 0 2px 0 rgba(28,44,91,0.2);
+  }
+  .masthead h1 span { color: var(--ink); }
+  .deck {
+    text-align: center; font-family: var(--serif); font-style: italic;
+    font-size: 1.05rem; color: #EAF4FB; margin: 0 0 0.9rem;
+  }
+  .disclaimer {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 0.85rem 0; font-size: 0.86rem; color: #D6E8F5; text-align: center;
+  }
+  .disclaimer strong { color: #6CABDD; font-weight: 600; }
+  .nav-mini {
+    display: flex; flex-wrap: wrap; gap: 0.6rem 1rem;
+    justify-content: center; padding: 0.75rem 0 1.1rem; font-size: 0.8rem;
+  }
+  .nav-mini a {
+    color: #fff; text-decoration: none; border-bottom: 1px solid transparent;
+  }
+  .nav-mini a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  .nav-mini a[aria-current="page"] {
+    color: var(--ink); border-bottom-color: var(--ink); font-weight: 700;
+  }
+
+  .hero-total {
+    background: linear-gradient(180deg, #6CABDD 0%, #4E94C8 40%, #1C2C5B 100%);
+    color: #fff; padding: 2.5rem 0 3rem; text-align: center;
+  }
+  .hero-total .section-label {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #EAF4FB; margin: 0 0 0.5rem;
+  }
+  .big-total {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 9vw, 5.2rem);
+    font-weight: 700; letter-spacing: -0.03em; line-height: 1.05;
+    margin: 0.2rem 0; text-shadow: 0 3px 0 rgba(28,44,91,0.35);
+  }
+  .big-sub {
+    font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.06em;
+    color: #D6E8F5; margin: 0.5rem 0 0;
+  }
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
+    max-width: 520px; margin: 1.4rem auto 0;
+  }
+  @media (max-width: 520px) { .split { grid-template-columns: 1fr; } }
+  .split .tile {
+    background: rgba(28,44,91,0.45); border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.85rem 1rem; text-align: left;
+  }
+  .split .k {
+    font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #6CABDD;
+  }
+  .split .v { font-family: var(--serif); font-size: 1.35rem; margin-top: 0.25rem; }
+
+  section { padding: 2.5rem 0; }
+  .section-label {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 0.4rem;
+  }
+  h2 {
+    font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin: 0 0 0.6rem; letter-spacing: -0.01em; line-height: 1.15;
+  }
+  .lede { max-width: 44rem; color: var(--muted); margin: 0 0 1.4rem; }
+
+  #filters { background: var(--newsprint); border-top: 1px solid #C5D9EB; border-bottom: 1px solid #C5D9EB; }
+  .filter-row {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+  }
+  .filter-row label {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  select#teamFilter {
+    background: #fff; border: 2px solid var(--ink); color: var(--ink);
+    padding: 0.55rem 0.85rem; font-size: 0.95rem; min-width: min(280px, 100%);
+  }
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem;
+  }
+  .chip {
+    border: 1px solid #C5D9EB; background: #fff; color: var(--ink);
+    padding: 0.3rem 0.65rem; font-size: 0.78rem; border-radius: 999px;
+  }
+  .chip.active, .chip:hover { background: #6CABDD; border-color: #1C2C5B; color: #1C2C5B; }
+  .chip.active { font-weight: 700; }
+
+  .rules-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.75rem; margin-top: 0.5rem;
+  }
+  .rule-card {
+    border: 1px solid #C5D9EB; border-top: 3px solid #6CABDD;
+    background: #fff; padding: 0.9rem 1rem;
+  }
+  .rule-card h3 {
+    font-family: var(--serif); font-size: 1.05rem; margin: 0 0 0.35rem;
+  }
+  .rule-card p { margin: 0; font-size: 0.88rem; color: #3a3832; }
+
+  #breakdown { background: var(--paper); }
+  .meta-bar {
+    display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem;
+    font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em;
+    color: var(--muted); margin-bottom: 1rem;
+  }
+  .line {
+    border: 1px solid #C5D9EB; border-left: 4px solid #6CABDD;
+    padding: 0.9rem 1rem; margin-bottom: 0.65rem; background: #fff;
+  }
+  .line.r-finished_below { border-left-color: #6CABDD; }
+  .line.r-pushed_cl, .line.r-pushed_europe { border-left-color: #1C2C5B; }
+  .line.r-lost_title { border-left-color: #3A7CA5; }
+  .line.r-reputational { border-left-color: #8b1e1e; }
+  .line.r-cup_final { border-left-color: #0f5132; }
+  .line-top {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.35rem 1rem;
+    align-items: baseline;
+  }
+  .line-club {
+    font-family: var(--serif); font-size: 1.1rem; font-weight: 700; margin: 0;
+  }
+  .line-total {
+    font-family: var(--mono); font-weight: 700; font-size: 0.95rem; color: var(--sky-deep);
+  }
+  .line-label { margin: 0.35rem 0 0.55rem; font-size: 0.9rem; color: #3a3832; }
+  .line-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 700px) {
+    .line-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .line-grid span { display: block; font-family: var(--mono); font-size: 0.65rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .empty {
+    padding: 2rem; text-align: center; color: var(--muted);
+    border: 1px dashed #C5D9EB;
+  }
+
+  .notes {
+    background: var(--newsprint); border-top: 1px solid #C5D9EB;
+    font-size: 0.9rem; color: var(--muted);
+  }
+  .notes ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+  .notes a { word-break: break-all; }
+
+  footer.site-foot {
+    background: #1C2C5B; color: #D6E8F5; padding: 2rem 0 2.5rem;
+    font-size: 0.88rem; border-top: 4px solid #6CABDD;
+  }
+  footer.site-foot .brand {
+    font-family: var(--serif); color: #fff; font-size: 1.35rem; margin: 0 0 0.35rem;
+  }
+  footer.site-foot .domain {
+    font-family: var(--mono); color: #6CABDD; letter-spacing: 0.04em; font-weight: 700;
+  }
+  footer.site-foot a { color: #6CABDD; }
+  footer.site-foot a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <span>Vol. I · No. 115 · Fines</span>
+      <span class="domain">shamchester-city.co.uk</span>
+      <span id="mastDate"></span>
+    </div>
+    <div class="masthead-brand">
+<svg class="logo-roundel" viewBox="0 0 200 200" role="img" aria-label="Shamchester City badge" xmlns="http://www.w3.org/2000/svg">
+        <title>Shamchester City</title>
+        <circle cx="100" cy="100" r="98" fill="#1C2C5B"/>
+        <circle cx="100" cy="100" r="91" fill="#6CABDD"/>
+        <circle cx="100" cy="100" r="70" fill="#FFFFFF"/>
+        <circle cx="100" cy="100" r="64" fill="none" stroke="#1C2C5B" stroke-width="2.5"/>
+        <defs>
+          <path id="scRingTop" d="M 28,108 A 72,72 0 0,1 172,108" fill="none"/>
+          <path id="scRingBot" d="M 34,118 A 70,70 0 0,0 166,118" fill="none"/>
+        </defs>
+        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="13.5" font-weight="800" letter-spacing="3.2">
+          <textPath href="#scRingTop" startOffset="50%" text-anchor="middle">SHAMCHESTER</textPath>
+        </text>
+        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="14" font-weight="800" letter-spacing="5">
+          <textPath href="#scRingBot" startOffset="50%" text-anchor="middle">CITY</textPath>
+        </text>
+        <circle cx="100" cy="100" r="46" fill="none" stroke="#6CABDD" stroke-width="3.5"/>
+        <text x="100" y="112" text-anchor="middle" fill="#1C2C5B" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.5">SC</text>
+      </svg>
+      <h1>Sham<span>chester</span> City</h1>
+    </div>
+    <p class="deck">What the rest of the league could claim — a satirical calculator.</p>
+    <nav class="nav-mini" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="fines.html" aria-current="page">Fines</a>
+      <a href="index.html#counter">The counter</a>
+      <a href="index.html#timeline">Timeline</a>
+      <a href="index.html#sponsors">Sponsor map</a>
+      <a href="index.html#sanctions">Sanction scale</a>
+    </nav>
+  </div>
+  <div class="disclaimer">
+    <div class="wrap">
+      <strong>Disclaimer:</strong>
+      This page is illustrative only. The rates below were invented by the site owner for satire.
+      They are not what any club is owed, not a Premier League sanction, not a legal claim, and not a prediction.
+      Figures use real league tables and cup finals; the money is make-believe.
+      Not affiliated with Manchester City Football Club or the Premier League.
+    </div>
+  </div>
+</header>
+
+<section class="hero-total" aria-labelledby="totalHeading">
+  <div class="wrap">
+    <p class="section-label" id="totalHeading">Hypothetical grand total · principal + compound interest to today</p>
+    <p class="big-total" id="bigTotal" aria-live="polite">£0</p>
+    <p class="big-sub" id="bigSub">Counting up on first load · then live to today’s date</p>
+    <div class="split">
+      <div class="tile">
+        <div class="k">Principal (invented)</div>
+        <div class="v" id="principalTotal">£0</div>
+      </div>
+      <div class="tile">
+        <div class="k">Interest at 4% daily compound</div>
+        <div class="v" id="interestTotal">£0</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <p class="section-label">The invented tariff</p>
+    <h2>How the satire is scored</h2>
+    <p class="lede">British spelling. Pounds sterling. Interest compounds daily at 4% a year from 1 July after each season until the day you open this page. Seasons: every Premier League campaign Manchester City have played from 2008–09 through 2017–18.</p>
+    <div class="rules-grid">
+      <article class="rule-card">
+        <h3>Finished below City</h3>
+        <p>Every club that finished below Manchester City that season: £3m, plus interest from the following 1 July.</p>
+      </article>
+      <article class="rule-card">
+        <h3>Pushed in Europe</h3>
+        <p>Remove City from the table and shift clubs up. If a club would have made the Champions League but only got Europa League: £20m CL revenue + £10m receipts + £10m sponsors. If a club would have made CL or EL but missed Europe entirely: the same £40m, labelled for the competition they would have made. Only when City occupied the relevant European place; only clubs whose status actually changes.</p>
+      </article>
+      <article class="rule-card">
+        <h3>Lost the title</h3>
+        <p>When City won the league, the runner-up already has the £3m “finished below” line. On top: £10m sponsor bonus + £10m boosted earnings. Manchester United or Liverpool only, when second to a City title: a further £20m for reputational damage.</p>
+      </article>
+      <article class="rule-card">
+        <h3>Cup final</h3>
+        <p>When City won the FA Cup or League Cup, only the club they beat in that final: £5m boosted revenue. Not every round.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="filters">
+  <div class="wrap">
+    <p class="section-label">Filter</p>
+    <h2>By club</h2>
+    <p class="lede">Default shows every invented line. Pick a club to see only their rows; the totals above update immediately (no re-animation).</p>
+    <div class="filter-row">
+      <label for="teamFilter">Club</label>
+      <select id="teamFilter"></select>
+    </div>
+    <div class="chips" id="chipList" aria-label="Quick club filters"></div>
+  </div>
+</section>
+
+<section id="breakdown">
+  <div class="wrap">
+    <p class="section-label">Line by line</p>
+    <h2>Breakdown</h2>
+    <div class="meta-bar">
+      <span id="metaCount"></span>
+      <span id="metaAsOf"></span>
+    </div>
+    <div id="lines"></div>
+  </div>
+</section>
+
+<section class="notes">
+  <div class="wrap">
+    <p class="section-label">Sources and gaps</p>
+    <h2>Research notes</h2>
+    <p>League tables and European cut-offs drawn from season pages and compiled tables (Wikipedia Premier League season articles; englishfootballstats.co.uk Level 1 tables). Cup finals from published FA Cup and League Cup records. Domestic Conference League places are ignored except where needed to see that a club did not receive Champions League or Europa League football.</p>
+    <ul>
+      <li>Seasons included: 2008–09 through 2017–18 only (the charged window).</li>
+      <li>Seasons skipped for missing tables: none.</li>
+      <li>Never used Footy Headlines.</li>
+    </ul>
+    <p style="margin-top:1rem;">Example sources:
+      <a href="https://en.wikipedia.org/wiki/List_of_Manchester_City_F.C._seasons" target="_blank" rel="noopener noreferrer">List of Manchester City F.C. seasons</a> ·
+      <a href="https://en.wikipedia.org/wiki/2008%E2%80%9309_Premier_League" target="_blank" rel="noopener noreferrer">2008–09 Premier League</a> ·
+      <a href="http://www.englishfootballstats.co.uk/Level%201%20Tables/2017-18.htm" target="_blank" rel="noopener noreferrer">2017–18 final table</a> ·
+      <a href="https://www.nbcsports.com/soccer/news/manchester-city-trophy-history-list-of-finals-played-silverware-won-by-man-city" target="_blank" rel="noopener noreferrer">City cup final history</a>
+    </p>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="brand">Shamchester City</p>
+    <p class="domain">shamchester-city.co.uk</p>
+    <p style="margin:0.8rem 0 0;max-width:36rem;">
+      A self-contained prototype. British English. Offline-capable except source links.
+      <a href="index.html">Back to the charges brief</a>.
+    </p>
+    <p style="margin:0.8rem 0 0;max-width:40rem;">
+      This website was built by Manchester United supporters at <a href="https://casualfootballshirts.co.uk">casualfootballshirts.co.uk</a> and is just a bit of fun. All figures are an estimation.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var CLAIMS = [{"season": "2008-09", "club": "Wigan Athletic", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Bolton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Portsmouth", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Blackburn Rovers", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Hull City", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "Middlesbrough", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2008-09", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2008-09)", "principal": 3000000, "start": "2009-07-01"}, {"season": "2009-10", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Birmingham City", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Blackburn Rovers", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Fulham", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Bolton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Wolverhampton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Wigan Athletic", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Burnley", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Hull City", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Portsmouth", "rule": "finished_below", "label": "Finished below Manchester City (2009-10)", "principal": 3000000, "start": "2010-07-01"}, {"season": "2009-10", "club": "Everton", "rule": "pushed_europe", "label": "Missed EL entirely because City took an Europa League place (2009-10) — EL revenue + match receipts + sponsors", "principal": 40000000, "start": "2010-07-01"}, {"season": "2010-11", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Tottenham Hotspur", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Fulham", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Bolton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Blackburn Rovers", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Wigan Athletic", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Wolverhampton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Birmingham City", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Blackpool", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2010-11)", "principal": 3000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Stoke City", "rule": "cup_final", "label": "FA Cup final defeat to City — boosted revenue (2010-11)", "principal": 5000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Tottenham Hotspur", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2010-11) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2011-07-01"}, {"season": "2010-11", "club": "Liverpool", "rule": "pushed_europe", "label": "Missed EL entirely because City took a European place (2010-11) — EL revenue + match receipts + sponsors", "principal": 40000000, "start": "2011-07-01"}, {"season": "2011-12", "club": "Manchester United", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Tottenham Hotspur", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Chelsea", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Fulham", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Norwich City", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Wigan Athletic", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Queens Park Rangers", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Bolton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Blackburn Rovers", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Wolverhampton Wanderers", "rule": "finished_below", "label": "Finished below Manchester City (2011-12)", "principal": 3000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Manchester United", "rule": "lost_title", "label": "Lost the title to City — sponsor bonus + boosted earnings (2011-12)", "principal": 20000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Manchester United", "rule": "reputational", "label": "Finished second to City — reputational damage (2011-12)", "principal": 20000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Tottenham Hotspur", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2011-12) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2012-07-01"}, {"season": "2011-12", "club": "Newcastle United", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2011-12) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2012-07-01"}, {"season": "2012-13", "club": "Chelsea", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Tottenham Hotspur", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Norwich City", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Fulham", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Southampton", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Wigan Athletic", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Reading", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Queens Park Rangers", "rule": "finished_below", "label": "Finished below Manchester City (2012-13)", "principal": 3000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Tottenham Hotspur", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2012-13) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2013-07-01"}, {"season": "2012-13", "club": "Everton", "rule": "pushed_europe", "label": "Missed EL entirely because City took a European place (2012-13) — EL revenue + match receipts + sponsors", "principal": 40000000, "start": "2013-07-01"}, {"season": "2013-14", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Chelsea", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Tottenham Hotspur", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Manchester United", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Southampton", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Crystal Palace", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Hull City", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Norwich City", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Fulham", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Cardiff City", "rule": "finished_below", "label": "Finished below Manchester City (2013-14)", "principal": 3000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Liverpool", "rule": "lost_title", "label": "Lost the title to City — sponsor bonus + boosted earnings (2013-14)", "principal": 20000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Liverpool", "rule": "reputational", "label": "Finished second to City — reputational damage (2013-14)", "principal": 20000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Sunderland", "rule": "cup_final", "label": "League Cup final defeat to City — boosted revenue (2013-14)", "principal": 5000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Everton", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2013-14) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2014-07-01"}, {"season": "2013-14", "club": "Manchester United", "rule": "pushed_europe", "label": "Missed EL entirely because City took a European place (2013-14) — EL revenue + match receipts + sponsors", "principal": 40000000, "start": "2014-07-01"}, {"season": "2014-15", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Manchester United", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Tottenham Hotspur", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Southampton", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Crystal Palace", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Leicester City", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Hull City", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Burnley", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Queens Park Rangers", "rule": "finished_below", "label": "Finished below Manchester City (2014-15)", "principal": 3000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Tottenham Hotspur", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2014-15) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2015-07-01"}, {"season": "2014-15", "club": "Southampton", "rule": "pushed_europe", "label": "Missed EL entirely because City took a European place (2014-15) — EL revenue + match receipts + sponsors", "principal": 40000000, "start": "2015-07-01"}, {"season": "2015-16", "club": "Manchester United", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Southampton", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Chelsea", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Watford", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Crystal Palace", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "AFC Bournemouth", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Norwich City", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Aston Villa", "rule": "finished_below", "label": "Finished below Manchester City (2015-16)", "principal": 3000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Liverpool", "rule": "cup_final", "label": "League Cup final defeat to City — boosted revenue (2015-16)", "principal": 5000000, "start": "2016-07-01"}, {"season": "2015-16", "club": "Manchester United", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2015-16) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2016-07-01"}, {"season": "2016-17", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Manchester United", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Southampton", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "AFC Bournemouth", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Leicester City", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Crystal Palace", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Burnley", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Watford", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Hull City", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Middlesbrough", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Sunderland", "rule": "finished_below", "label": "Finished below Manchester City (2016-17)", "principal": 3000000, "start": "2017-07-01"}, {"season": "2016-17", "club": "Arsenal", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2016-17) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2017-07-01"}, {"season": "2017-18", "club": "Manchester United", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Tottenham Hotspur", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Liverpool", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Chelsea", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Arsenal", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Burnley", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Everton", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Leicester City", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Newcastle United", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Crystal Palace", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "AFC Bournemouth", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "West Ham United", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Watford", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Brighton & Hove Albion", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Huddersfield Town", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Southampton", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Swansea City", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Stoke City", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "West Bromwich Albion", "rule": "finished_below", "label": "Finished below Manchester City (2017-18)", "principal": 3000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Manchester United", "rule": "lost_title", "label": "Lost the title to City — sponsor bonus + boosted earnings (2017-18)", "principal": 20000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Manchester United", "rule": "reputational", "label": "Finished second to City — reputational damage (2017-18)", "principal": 20000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Arsenal", "rule": "cup_final", "label": "League Cup final defeat to City — boosted revenue (2017-18)", "principal": 5000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Chelsea", "rule": "pushed_cl", "label": "Pushed out of Champions League into Europa League by City (2017-18) — CL revenue + match receipts + sponsors", "principal": 40000000, "start": "2018-07-01"}, {"season": "2017-18", "club": "Everton", "rule": "pushed_europe", "label": "Missed EL entirely because City took a European place (2017-18) — EL revenue + match receipts + sponsors", "principal": 40000000, "start": "2018-07-01"}];
+
+  function gbp(n) {
+    var neg = n < 0; n = Math.abs(n);
+    var s = Math.round(n).toLocaleString("en-GB");
+    return (neg ? "-£" : "£") + s;
+  }
+  function gbpExact(n) {
+    return "£" + n.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function enrich(today) {
+    return CLAIMS.map(function (L) {
+      var start = new Date(L.start + "T00:00:00");
+      var days = Math.max(0, Math.floor((today - start) / 86400000));
+      var total = L.principal * Math.pow(1.04, days / 365.25);
+      var interest = total - L.principal;
+      return {
+        season: L.season, club: L.club, rule: L.rule, label: L.label,
+        principal: L.principal, start: L.start, days: days,
+        interest: interest, total: total
+      };
+    });
+  }
+
+  var today = new Date();
+  today.setHours(0,0,0,0);
+  var rows = enrich(today);
+
+  document.getElementById("mastDate").textContent = today.toLocaleDateString("en-GB", {
+    day: "numeric", month: "long", year: "numeric"
+  });
+  document.getElementById("metaAsOf").textContent =
+    "Interest to " + today.toLocaleDateString("en-GB");
+
+  var clubs = {};
+  rows.forEach(function (r) { clubs[r.club] = true; });
+  var clubList = Object.keys(clubs).sort(function (a, b) {
+    return a.localeCompare(b, "en-GB");
+  });
+
+  var sel = document.getElementById("teamFilter");
+  var optAll = document.createElement("option");
+  optAll.value = "";
+  optAll.textContent = "All clubs";
+  sel.appendChild(optAll);
+  clubList.forEach(function (c) {
+    var o = document.createElement("option");
+    o.value = c; o.textContent = c;
+    sel.appendChild(o);
+  });
+
+  var chips = document.getElementById("chipList");
+  function makeChip(label, value) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip" + (value === "" ? " active" : "");
+    b.textContent = label; b.dataset.club = value;
+    b.addEventListener("click", function () {
+      sel.value = value;
+      Array.prototype.forEach.call(chips.querySelectorAll(".chip"), function (x) {
+        x.classList.toggle("active", x.dataset.club === value);
+      });
+      render(true);
+    });
+    chips.appendChild(b);
+  }
+  makeChip("All", "");
+  ["Manchester United","Liverpool","Arsenal","Chelsea","Tottenham Hotspur","Everton","Newcastle United"].forEach(function (c) {
+    if (clubs[c]) makeChip(c.replace("Manchester ", "Man ").replace("Tottenham Hotspur","Spurs").replace("United","Utd"), c);
+  });
+
+  var animDone = false;
+  var animating = false;
+
+  function filtered() {
+    var v = sel.value;
+    if (!v) return rows.slice();
+    return rows.filter(function (r) { return r.club === v; });
+  }
+
+  function sums(list) {
+    var p = 0, i = 0, t = 0;
+    list.forEach(function (r) { p += r.principal; i += r.interest; t += r.total; });
+    return { p: p, i: i, t: t };
+  }
+
+  function setTotals(p, i, t) {
+    document.getElementById("principalTotal").textContent = gbp(p);
+    document.getElementById("interestTotal").textContent = gbp(i);
+    document.getElementById("bigTotal").textContent = gbp(t);
+  }
+
+  function renderLines(list) {
+    var box = document.getElementById("lines");
+    document.getElementById("metaCount").textContent = list.length + " line item" + (list.length === 1 ? "" : "s");
+    if (!list.length) {
+      box.innerHTML = '<div class="empty">No lines for this filter.</div>';
+      return;
+    }
+    list.sort(function (a, b) {
+      if (a.season !== b.season) return a.season < b.season ? 1 : -1;
+      if (a.club !== b.club) return a.club.localeCompare(b.club, "en-GB");
+      return a.rule.localeCompare(b.rule);
+    });
+    var html = "";
+    list.forEach(function (r) {
+      html += '<article class="line r-' + r.rule + '">' +
+        '<div class="line-top"><p class="line-club">' + r.club +
+        ' <span style="font-weight:400;font-size:0.85rem;color:#4A5F7A">· ' + r.season + '</span></p>' +
+        '<div class="line-total">' + gbpExact(r.total) + '</div></div>' +
+        '<p class="line-label">' + r.label + '</p>' +
+        '<div class="line-grid">' +
+          '<div><span>Principal</span>' + gbp(r.principal) + '</div>' +
+          '<div><span>Days of interest</span>' + r.days.toLocaleString("en-GB") + '</div>' +
+          '<div><span>Interest</span>' + gbpExact(r.interest) + '</div>' +
+          '<div><span>Line total</span>' + gbpExact(r.total) + '</div>' +
+        '</div></article>';
+    });
+    box.innerHTML = html;
+  }
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animateGrand(target) {
+    animating = true;
+    var start = performance.now();
+    var dur = 15000;
+    function frame(now) {
+      var t = Math.min(1, (now - start) / dur);
+      var v = target * easeOutCubic(t);
+      document.getElementById("bigTotal").textContent = gbp(v);
+      if (t < 1) requestAnimationFrame(frame);
+      else {
+        animating = false;
+        animDone = true;
+        document.getElementById("bigSub").textContent =
+          "Live total with interest accruing daily at 4% · filter updates instantly";
+        var s = sums(filtered());
+        setTotals(s.p, s.i, s.t);
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function render(fromFilter) {
+    var list = filtered();
+    var s = sums(list);
+    renderLines(list);
+    if (!animDone && !fromFilter) {
+      document.getElementById("principalTotal").textContent = gbp(s.p);
+      document.getElementById("interestTotal").textContent = gbp(s.i);
+      animateGrand(s.t);
+    } else if (animDone || fromFilter) {
+      setTotals(s.p, s.i, s.t);
+    }
+  }
+
+  sel.addEventListener("change", function () {
+    var v = sel.value;
+    Array.prototype.forEach.call(chips.querySelectorAll(".chip"), function (x) {
+      x.classList.toggle("active", x.dataset.club === v);
+    });
+    render(true);
+  });
+
+  render(false);
+})();
+</script>
+</body>
+</html>

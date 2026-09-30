@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFEL864LGT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HFEL864LGT');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shamchester City — The Premier League charges, not the sanction</title>
+<meta name="description" content="A satirical one-page brief on Manchester City’s Premier League financial charges. Allegations and commission findings with sources. Not affiliated with the club or the League.">
+<style>
+  :root {
+    --sky: #6CABDD;
+    --sky-deep: #1C2C5B;
+    --sky-mid: #3A7CA5;
+    --sky-bright: #A8D4F0;
+    --ink: #1C2C5B;
+    --ink-soft: #2A3F6B;
+    --paper: #FFFFFF;
+    --newsprint: #F0F6FB;
+    --rule: #1C2C5B;
+    --muted: #4A5F7A;
+    --danger: #8b1e1e;
+    --tag-proven: #0f5132;
+    --tag-alleged: #664d03;
+    --tag-panel: #084298;
+    --tag-admitted: #41464b;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    --condensed: "Arial Narrow", "Helvetica Condensed", "Franklin Gothic Medium", "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--sky-deep); }
+  a:hover { color: var(--sky); }
+  button { font-family: inherit; cursor: pointer; }
+  .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  /* Masthead */
+  .masthead {
+    background: linear-gradient(180deg, #6CABDD 0%, #5BA0D4 55%, #4E94C8 100%);
+    color: #fff;
+    border-bottom: 4px solid var(--ink);
+    padding: 1.25rem 0 0;
+  }
+  .masthead-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1rem; flex-wrap: wrap;
+    font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #fff; opacity: 0.95;
+  }
+  .masthead-top .domain { font-weight: 700; letter-spacing: 0.06em; }
+  .masthead-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 0.85rem 0 0.5rem;
+  }
+  .logo-roundel {
+    width: clamp(112px, 28vw, 148px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 4px 0 rgba(28,44,91,0.25));
+  }
+  .masthead h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 0 rgba(28,44,91,0.2);
+  }
+  .masthead h1 span { color: var(--ink); }
+  .deck {
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #EAF4FB;
+    margin: 0 0 0.9rem;
+  }
+  .disclaimer {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 0.7rem 0;
+    font-size: 0.82rem;
+    color: #D6E8F5;
+    text-align: center;
+  }
+  .disclaimer strong { color: #6CABDD; font-weight: 600; }
+  .ticker {
+    overflow: hidden;
+    background: var(--ink);
+    color: #fff;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    white-space: nowrap;
+  }
+  .ticker-track { color: #fff; }
+  .ticker-track .tick-sky { color: #6CABDD; }
+  .ticker-track {
+    display: inline-block;
+    padding: 0.45rem 0;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    animation: tick 42s linear infinite;
+  }
+  @keyframes tick {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Sections */
+  section { padding: 3.5rem 0; }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.4rem;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .lede { max-width: 42rem; color: var(--muted); margin: 0 0 1.5rem; }
+
+  /* Counter */
+  #counter {
+    min-height: 180vh;
+    padding: 0;
+    position: relative;
+    background:
+      linear-gradient(180deg, #6CABDD 0%, #5BA3D6 35%, #3F7FB0 70%, #1C2C5B 100%);
+    color: #fff;
+  }
+  .counter-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .counter-kicker {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #EAF4FB;
+    margin-bottom: 0.8rem;
+  }
+  .counter-num {
+    font-family: var(--serif);
+    font-size: clamp(5.5rem, 22vw, 12rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-shadow: 0 4px 0 rgba(28,44,91,0.35);
+    transition: transform 0.15s ease, color 0.15s ease;
+  }
+  .counter-num:hover, .counter-num:focus-visible {
+    color: var(--ink);
+    transform: scale(1.03);
+    outline: none;
+  }
+  .counter-num:focus-visible { box-shadow: 0 0 0 3px #fff; border-radius: 8px; }
+  .counter-of {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: #EAF4FB;
+    margin: 0.4rem 0 1.2rem;
+  }
+  .counter-sentence {
+    max-width: 34rem;
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+    line-height: 1.4;
+    min-height: 4.2em;
+    color: #fff;
+  }
+  .counter-hint {
+    margin-top: 1.6rem;
+    font-size: 0.8rem;
+    color: #D6E8F5;
+    letter-spacing: 0.04em;
+  }
+  .counter-progress {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: rgba(28,44,91,0.25);
+  }
+  .counter-progress > i {
+    display: block; height: 100%; width: 0;
+    background: #fff;
+  }
+
+  /* Side panel */
+  .backdrop {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.55);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 80;
+  }
+  .backdrop.open { opacity: 1; pointer-events: auto; }
+  .side-panel {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(420px, 100%);
+    background: var(--paper);
+    color: var(--ink);
+    z-index: 90;
+    transform: translateX(105%);
+    transition: transform 0.28s cubic-bezier(.2,.8,.2,1);
+    box-shadow: -12px 0 40px rgba(0,0,0,0.35);
+    display: flex; flex-direction: column;
+  }
+  .side-panel.open { transform: translateX(0); }
+  .side-panel header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 2px solid var(--ink);
+    background: var(--newsprint);
+  }
+  .side-panel header h3 {
+    font-family: var(--serif);
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  .side-panel .close {
+    background: transparent; border: 1px solid var(--ink);
+    width: 2.2rem; height: 2.2rem; border-radius: 999px;
+    font-size: 1.1rem; line-height: 1; flex-shrink: 0;
+  }
+  .side-panel .body {
+    padding: 1.25rem; overflow-y: auto; flex: 1;
+  }
+  .side-panel dl { margin: 0; }
+  .side-panel dt {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 1rem 0 0.35rem;
+  }
+  .side-panel dt:first-child { margin-top: 0; }
+  .side-panel dd { margin: 0; }
+  .side-panel .source-link {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+  .status-pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+    background: #ddd;
+    color: #222;
+  }
+  .status-pill.proven { background: #d1e7dd; color: var(--tag-proven); }
+  .status-pill.alleged { background: #fff3cd; color: var(--tag-alleged); }
+  .status-pill.panel { background: #cfe2ff; color: var(--tag-panel); }
+  .status-pill.admitted { background: #e2e3e5; color: var(--tag-admitted); }
+  .status-pill.overturned { background: #f8d7da; color: var(--danger); }
+
+  /* Timeline */
+  #timeline { background: var(--newsprint); border-top: 1px solid #C5D9EB; border-bottom: 1px solid #C5D9EB; }
+  .timeline-shell {
+    position: relative;
+    margin-top: 1rem;
+  }
+  .timeline-hint {
+    font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem;
+  }
+  .timeline-track {
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 0.5rem;
+  }
+  .timeline-track.dragging { cursor: grabbing; }
+  .timeline-rail {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    min-width: max-content;
+    padding: 2.2rem 0.5rem 0.5rem;
+  }
+  .timeline-rail::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 1.05rem;
+    height: 3px;
+    background: linear-gradient(90deg, #1C2C5B, #6CABDD, #1C2C5B);
+  }
+  .t-card {
+    width: min(260px, 72vw);
+    background: var(--paper);
+    border: 1px solid #C5D9EB;
+    border-top: 3px solid #6CABDD;
+    padding: 0.9rem 1rem 1rem;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.04);
+  }
+  .t-card::before {
+    content: "";
+    position: absolute;
+    top: -2.05rem; left: 1rem;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--sky);
+    border: 2px solid var(--ink);
+  }
+  .t-date {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 0.35rem;
+  }
+  .t-card h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    margin: 0 0 0.4rem;
+    line-height: 1.25;
+  }
+  .t-card p { margin: 0; font-size: 0.9rem; color: #3a3832; }
+  .t-card .tag { margin-top: 0.7rem; }
+
+  /* Sponsor map */
+  #sponsors { background: var(--paper); }
+  .map-stage {
+    position: relative;
+    background: linear-gradient(160deg, #1C2C5B 0%, #243A6B 45%, #2F4F82 100%);
+    color: #fff;
+    border: 2px solid #6CABDD;
+    border-radius: 4px;
+    min-height: 480px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+  .map-stage svg.map-lines {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .map-stage svg.map-lines line {
+    stroke: #6CABDD;
+    stroke-width: 1.5;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 4 4;
+  }
+  .node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 2px solid #6CABDD;
+    background: rgba(28,44,91,0.85);
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 2;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  }
+  .node:hover, .node:focus-visible {
+    background: #6CABDD;
+    color: #1C2C5B;
+    outline: none;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  .node.hub {
+    background: #6CABDD;
+    color: #1C2C5B;
+    border-color: #fff;
+    font-family: var(--serif);
+    font-size: 1rem;
+    padding: 0.85rem 1.2rem;
+    z-index: 3;
+  }
+  .node.hub:hover { background: #fff; }
+  .map-card {
+    position: absolute;
+    left: 1rem; right: 1rem; bottom: 1rem;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 1rem 1.1rem;
+    z-index: 5;
+    display: none;
+    max-width: 420px;
+  }
+  .map-card.show { display: block; }
+  .map-card h3 {
+    font-family: var(--serif);
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+  }
+  .map-card p { margin: 0 0 0.55rem; font-size: 0.92rem; }
+  .map-card .close {
+    position: absolute; top: 0.55rem; right: 0.55rem;
+    border: 1px solid var(--ink); background: transparent;
+    width: 1.8rem; height: 1.8rem; border-radius: 999px;
+  }
+  .map-note {
+    font-size: 0.85rem; color: var(--muted); margin-top: 0.85rem;
+  }
+
+  /* Sanction scale */
+  #sanctions { background: linear-gradient(180deg, #6CABDD 0%, #4E94C8 40%, #1C2C5B 100%); color: #fff; }
+  #sanctions .section-label { color: #EAF4FB; }
+  #sanctions .lede { color: #EAF4FB; }
+  #sanctions h2 { color: #fff; }
+  .slider-box {
+    background: rgba(255,255,255,0.12);
+    border: 2px solid #fff;
+    padding: 1.4rem 1.3rem 1.6rem;
+    margin-top: 0.5rem;
+    backdrop-filter: blur(2px);
+  }
+  .slider-label {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1rem; flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+  input[type="range"] {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 6px;
+    background: linear-gradient(90deg, #1C2C5B, #FFFFFF);
+    border-radius: 999px; outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #fff; border: 3px solid #1C2C5B;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.35);
+    cursor: pointer;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #fff; border: 3px solid #1C2C5B;
+    cursor: pointer;
+  }
+  .readouts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  @media (max-width: 700px) {
+    .readouts { grid-template-columns: 1fr; }
+  }
+  .readout {
+    background: #1C2C5B;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 1rem;
+  }
+  .readout .k {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6CABDD;
+  }
+  .readout .v {
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    margin: 0.35rem 0 0.25rem;
+    color: #fff;
+  }
+  .readout .s { font-size: 0.82rem; color: #D6E8F5; }
+  .scale-caveat {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    color: #fff;
+    border-left: 3px solid #fff;
+    padding-left: 0.85rem;
+  }
+  .scale-markers {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .scale-markers span {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.5rem;
+    background: rgba(28,44,91,0.55);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+  }
+
+  /* Sources */
+  .sources-btn {
+    position: fixed;
+    right: 1rem; bottom: 1rem;
+    z-index: 70;
+    background: #6CABDD;
+    color: #1C2C5B;
+    border: 2px solid #1C2C5B;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.1rem;
+    box-shadow: 4px 4px 0 #1C2C5B;
+  }
+  .sources-btn:hover { background: #fff; }
+  .sources-drawer {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    max-height: min(70vh, 560px);
+    background: var(--paper);
+    border-top: 4px solid var(--ink);
+    z-index: 95;
+    transform: translateY(110%);
+    transition: transform 0.28s cubic-bezier(.2,.8,.2,1);
+    display: flex; flex-direction: column;
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.25);
+  }
+  .sources-drawer.open { transform: translateY(0); }
+  .sources-drawer header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.9rem 1.25rem;
+    border-bottom: 1px solid #ccc;
+    background: var(--newsprint);
+  }
+  .sources-drawer header h3 {
+    font-family: var(--serif); margin: 0; font-size: 1.2rem;
+  }
+  .sources-list {
+    overflow-y: auto; padding: 0.5rem 0 1.5rem;
+  }
+  .source-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.35rem 1rem;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid #ddd7cb;
+  }
+  .source-row .name { font-weight: 600; }
+  .source-row .meta {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .source-row a {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    word-break: break-all;
+  }
+  @media (min-width: 700px) {
+    .source-row {
+      grid-template-columns: 1.2fr 0.5fr 1.5fr;
+      align-items: baseline;
+    }
+    .source-row a { grid-column: auto; }
+  }
+
+  footer.site-foot {
+    background: #1C2C5B;
+    color: #D6E8F5;
+    padding: 2rem 0 5.5rem;
+    font-size: 0.88rem;
+    border-top: 4px solid #6CABDD;
+  }
+  footer.site-foot .brand {
+    font-family: var(--serif);
+    color: #fff;
+    font-size: 1.35rem;
+    margin: 0 0 0.35rem;
+  }
+  footer.site-foot .domain {
+    font-family: var(--mono);
+    color: #6CABDD;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+  }
+
+  .nav-mini {
+    display: flex; flex-wrap: wrap; gap: 0.6rem 1rem;
+    justify-content: center;
+    padding: 0.75rem 0 1.1rem;
+    font-size: 0.8rem;
+  }
+  .nav-mini a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .nav-mini a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  .source-row { border-bottom: 1px solid #C5D9EB; }
+  .sources-drawer { border-top-color: #6CABDD; }
+  a { color: #1C2C5B; }
+  a:hover { color: #6CABDD; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <span>Vol. I · No. 115</span>
+      <span class="domain">shamchester-city.co.uk</span>
+      <span>30 September 2026</span>
+    </div>
+    <div class="masthead-brand">
+      <svg class="logo-roundel" viewBox="0 0 200 200" role="img" aria-label="Shamchester City badge" xmlns="http://www.w3.org/2000/svg">
+        <title>Shamchester City</title>
+        <!-- Original circular roundel (Oasis-style badge idea only). City blue #6CABDD, white, navy. Not an Oasis mark. -->
+        <circle cx="100" cy="100" r="98" fill="#1C2C5B"/>
+        <circle cx="100" cy="100" r="91" fill="#6CABDD"/>
+        <circle cx="100" cy="100" r="70" fill="#FFFFFF"/>
+        <circle cx="100" cy="100" r="64" fill="none" stroke="#1C2C5B" stroke-width="2.5"/>
+        <defs>
+          <!-- Top arc left-to-right for SHAMCHESTER -->
+          <path id="scRingTop" d="M 28,108 A 72,72 0 0,1 172,108" fill="none"/>
+          <!-- Bottom arc left-to-right (underneath) for CITY -->
+          <path id="scRingBot" d="M 34,118 A 70,70 0 0,0 166,118" fill="none"/>
+        </defs>
+        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="13.5" font-weight="800" letter-spacing="3.2">
+          <textPath href="#scRingTop" xlink:href="#scRingTop" startOffset="50%" text-anchor="middle">SHAMCHESTER</textPath>
+        </text>
+        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="14" font-weight="800" letter-spacing="5">
+          <textPath href="#scRingBot" xlink:href="#scRingBot" startOffset="50%" text-anchor="middle">CITY</textPath>
+        </text>
+        <circle cx="100" cy="100" r="46" fill="none" stroke="#6CABDD" stroke-width="3.5"/>
+        <text x="100" y="112" text-anchor="middle" fill="#1C2C5B" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.5">SC</text>
+      </svg>
+      <h1>Sham<span>chester</span> City</h1>
+    </div>
+    <p class="deck">A satirical brief on the charges — not a prediction of the punishment.</p>
+    <nav class="nav-mini" aria-label="Sections">
+      <a href="#counter">The counter</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#sponsors">Sponsor map</a>
+      <a href="#sanctions">Sanction scale</a>
+      <a href="fines.html">Fines</a>
+    </nav>
+  </div>
+  <div class="disclaimer">
+    <div class="wrap">
+      <strong>Disclaimer:</strong>
+      Findings below follow the Premier League’s published Core Decision of 29&nbsp;Sep&nbsp;2026 where that decision speaks.
+      Where no ruling yet exists (including any sanction), treat claims as disputed.
+      This is not legal advice.
+      Not affiliated with Manchester City Football Club or the Premier League.
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      115 charges referred · Feb 2023 &nbsp;//&nbsp;
+      Independent commission: all financial charges proved · majority of co-operation charges proved · 29 Sep 2026 &nbsp;//&nbsp;
+      Sanctions still to be heard &nbsp;//&nbsp;
+      Club appeal window open to 2 Oct 2026 &nbsp;//&nbsp;
+      115 charges referred · Feb 2023 &nbsp;//&nbsp;
+      Independent commission: all financial charges proved · majority of co-operation charges proved · 29 Sep 2026 &nbsp;//&nbsp;
+      Sanctions still to be heard &nbsp;//&nbsp;
+      Club appeal window open to 2 Oct 2026 &nbsp;//&nbsp;
+    </div>
+  </div>
+</header>
+
+<section id="counter" aria-labelledby="counter-heading">
+  <div class="counter-sticky">
+    <p class="counter-kicker" id="counter-heading">Charge counter · scroll to climb</p>
+    <button type="button" class="counter-num" id="chargeNum" aria-controls="chargePanel" aria-expanded="false" title="Open charge detail">0</button>
+    <p class="counter-of" id="chargeOf">of 115 referred · Feb 2023</p>
+    <p class="counter-sentence" id="chargeSentence">Scroll through this section. Each tick is one referred charge — or a representative sample of the five categories the League published.</p>
+    <p class="counter-hint">Tap or click the number for the rule, the finding, and the source.</p>
+    <div class="counter-progress" aria-hidden="true"><i id="chargeBar"></i></div>
+  </div>
+</section>
+
+<aside class="backdrop" id="backdrop" hidden></aside>
+<aside class="side-panel" id="chargePanel" role="dialog" aria-modal="true" aria-labelledby="panelTitle" hidden>
+  <header>
+    <h3 id="panelTitle">Charge detail</h3>
+    <button type="button" class="close" id="panelClose" aria-label="Close panel">&times;</button>
+  </header>
+  <div class="body">
+    <dl>
+      <dt>Status</dt>
+      <dd><span class="status-pill" id="panelStatus">—</span></dd>
+      <dt>The rule, in plain English</dt>
+      <dd id="panelRule"></dd>
+      <dt>What City face / faced</dt>
+      <dd id="panelAccused"></dd>
+      <dt>Source</dt>
+      <dd id="panelSource"></dd>
+    </dl>
+  </div>
+</aside>
+
+<section id="timeline">
+  <div class="wrap">
+    <p class="section-label">From takeover to Core Decision</p>
+    <h2>Timeline</h2>
+    <p class="lede">Drag or scroll the bar. Tags are used only where a reputable source supports them. Nothing here calls a sanction “proven” — none has been published.</p>
+    <p class="timeline-hint">Drag sideways · or scroll horizontally</p>
+    <div class="timeline-shell">
+      <div class="timeline-track" id="timelineTrack">
+        <div class="timeline-rail" id="timelineRail"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sponsors">
+  <div class="wrap">
+    <p class="section-label">Disguised funding, as published</p>
+    <h2>Sponsor map</h2>
+    <p class="lede">Manchester City at the centre. Lines only where the published case connects two parties. Click a node for why it matters, what the rules expect, and the gap the commission found — or, for earlier public naming, what Der Spiegel and UEFA put on the record.</p>
+    <div class="map-stage" id="mapStage">
+      <svg class="map-lines" id="mapLines" aria-hidden="true"></svg>
+      <div class="map-card" id="mapCard" role="dialog" aria-labelledby="mapCardTitle">
+        <button type="button" class="close" id="mapCardClose" aria-label="Close">&times;</button>
+        <h3 id="mapCardTitle"></h3>
+        <div id="mapCardBody"></div>
+      </div>
+    </div>
+    <p class="map-note">The redacted Core Decision refers to “Abu Dhabi sponsors” and names ADUG and Fordham. Etihad and Etisalat appear here because Der Spiegel’s Football Leaks reporting and UEFA’s earlier case named them; the League’s public summary of the Core Decision does not list those brand names individually.</p>
+  </div>
+</section>
+
+<section id="sanctions">
+  <div class="wrap">
+    <p class="section-label">Other clubs only</p>
+    <h2>Sanction scale</h2>
+    <p class="lede">One slider. Three readouts. Built only from sanctions the Premier League (or, where labelled, another English competition) has already handed <em>other</em> clubs. Move the slider to see how published outcomes stack — not what City will get.</p>
+    <div class="slider-box">
+      <div class="slider-label">
+        <span>Severity index · other clubs</span>
+        <span id="sliderPos">1 / 6</span>
+      </div>
+      <label class="sr-only" for="sanctionSlider">Sanction severity from other clubs</label>
+      <input type="range" id="sanctionSlider" min="0" max="5" step="1" value="0">
+      <div class="readouts">
+        <div class="readout">
+          <div class="k">Points deduction</div>
+          <div class="v" id="roPoints">—</div>
+          <div class="s" id="roPointsSub"></div>
+        </div>
+        <div class="readout">
+          <div class="k">Transfer restriction</div>
+          <div class="v" id="roTransfer">—</div>
+          <div class="s" id="roTransferSub"></div>
+        </div>
+        <div class="readout">
+          <div class="k">Fine</div>
+          <div class="v" id="roFine">—</div>
+          <div class="s" id="roFineSub"></div>
+        </div>
+      </div>
+      <div class="scale-markers" id="scaleMarkers" aria-hidden="true"></div>
+      <p class="scale-caveat">This is a range from other clubs’ published outcomes, not a prediction for Manchester City. City’s sanction hearing has not yet produced a published award.</p>
+    </div>
+  </div>
+</section>
+
+<button type="button" class="sources-btn" id="sourcesOpen" aria-controls="sourcesDrawer" aria-expanded="false">Sources</button>
+
+<aside class="sources-drawer" id="sourcesDrawer" role="dialog" aria-modal="true" aria-labelledby="sourcesTitle" hidden>
+  <header>
+    <h3 id="sourcesTitle">Sources</h3>
+    <button type="button" class="close" id="sourcesClose" aria-label="Close sources" style="border:1px solid #111;background:transparent;width:2.2rem;height:2.2rem;border-radius:999px;">&times;</button>
+  </header>
+  <div class="sources-list" id="sourcesList"></div>
+</aside>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="brand">Shamchester City</p>
+    <p class="domain">shamchester-city.co.uk</p>
+    <p style="margin:0.8rem 0 0;max-width:36rem;">
+      A self-contained prototype. British English. Offline-capable.
+      Facts drawn from the Premier League statement and Core Decision coverage of 29&nbsp;September&nbsp;2026, plus earlier BBC, Guardian, Sky Sports, Der Spiegel and CAS reporting listed in Sources.
+      Satire sits in the masthead; the footnotes stay straight.
+    </p>
+    <p style="margin:1rem 0 0;max-width:36rem;">
+      This website was built by Manchester United supporters at <a href="https://casualfootballshirts.co.uk">casualfootballshirts.co.uk</a> and is just a bit of fun. All figures are an estimation.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Sources registry ---------- */
+  var SOURCES = [
+    {
+      id: "pl-2026-09-29",
+      name: "Premier League Statement: Manchester City FC",
+      date: "29 Sep 2026",
+      url: "https://www.premierleague.com/en/news/4727779"
+    },
+    {
+      id: "bbc-2026-09-29",
+      name: "BBC Sport — Man City guilty of ‘sham’ contracts and misleading accounts",
+      date: "29 Sep 2026",
+      url: "https://www.bbc.co.uk/sport/football/articles/c63reg93xwzro"
+    },
+    {
+      id: "bbc-2026-09-25",
+      name: "BBC Sport — Man City found guilty of breaking majority of 115 financial rules",
+      date: "25 Sep 2026",
+      url: "https://www.bbc.com/sport/football/articles/cw7v44ezry5go"
+    },
+    {
+      id: "bbc-web",
+      name: "BBC Sport — The intricate web Man City spun to con the Premier League",
+      date: "29 Sep 2026",
+      url: "https://www.bbc.co.uk/sport/football/articles/c65y51l3gzq4o"
+    },
+    {
+      id: "guardian-2026-09-29",
+      name: "The Guardian — Disguised funding and dishonest witnesses: key findings",
+      date: "29 Sep 2026",
+      url: "https://www.theguardian.com/football/2026/sep/29/disguised-funding-and-dishonest-witnesses-key-findings-in-manchester-city-case-premier-league"
+    },
+    {
+      id: "sky-fordham",
+      name: "Sky Sports — Key findings: The Fordham Arrangement",
+      date: "29 Sep 2026",
+      url: "https://www.skysports.com/football/news/13593407/man-city-charges-verdict-key-findings-the-fordham-arrangement-effectively-a-front-for-abu-dhabi-united-group"
+    },
+    {
+      id: "sky-next",
+      name: "Sky Sports — Appeal process, punishment hearing and what happens now",
+      date: "29 Sep 2026",
+      url: "https://www.skysports.com/football/news/13593377/man-city-premier-league-charges-appeal-process-punishment-hearing-and-what-happens-now-after-guilty-verdict"
+    },
+    {
+      id: "spiegel-2018",
+      name: "Der Spiegel — Manchester City Exposed: Bending the Rules to the Tune of Millions",
+      date: "Nov 2018",
+      url: "https://www.spiegel.de/international/manchester-city-exposed-bending-the-rules-to-the-tune-of-millions-a-1236346.html"
+    },
+    {
+      id: "spiegel-etisalat",
+      name: "Der Spiegel — Sponsorship Money – Paid for by the State",
+      date: "2018–2022 reporting",
+      url: "https://www.spiegel.de/international/europe/sponsorship-money-paid-for-by-the-state-a-2ad5b586-1d82-4a21-8065-f3c081cd91a4"
+    },
+    {
+      id: "bbc-cas-2020",
+      name: "BBC Sport — Manchester City overturn two-year ban from European competition on appeal to Cas",
+      date: "13 Jul 2020",
+      url: "https://www.bbc.co.uk/sport/football/53387306"
+    },
+    {
+      id: "guardian-cas-2020",
+      name: "The Guardian — Cas releases its reasons for overturning Manchester City’s Europe ban",
+      date: "28 Jul 2020",
+      url: "https://www.theguardian.com/football/2020/jul/28/uefa-claim-against-manchester-city-over-sponsor-money-time-barred-cas-rules"
+    },
+    {
+      id: "bbc-takeover",
+      name: "BBC Sport — Inside the deal on the day City became the richest club in the world",
+      date: "1 Sep 2018 (on 2008 takeover)",
+      url: "https://www.bbc.com/sport/football/45256691"
+    },
+    {
+      id: "pl-everton-appeal",
+      name: "Premier League statement — Everton appeal: six-point deduction",
+      date: "26 Feb 2024",
+      url: "https://www.premierleague.com/en/news/3912574"
+    },
+    {
+      id: "bbc-forest",
+      name: "BBC Sport — Nottingham Forest points deduction: appeal rejected (four points)",
+      date: "7 May 2024",
+      url: "https://www.bbc.com/sport/football/articles/cd13r56z21xo"
+    },
+    {
+      id: "pl-chelsea-2026",
+      name: "Premier League Statement — Chelsea sanctions (fines and transfer bans)",
+      date: "16 Mar 2026",
+      url: "https://www.premierleague.com/en/news/4616198/premier-league-statement-on-chelsea-sanctions-march-2026"
+    },
+    {
+      id: "pl-leicester-2026",
+      name: "Premier League Statement — Leicester City appeal decision (six points)",
+      date: "8 Apr 2026",
+      url: "https://www.premierleague.com/en/news/4624942/premier-league-statement-appeal-decision-on-leicester-city-080426"
+    },
+    {
+      id: "bbc-charges-breakdown",
+      name: "BBC Sport — What are the 115 charges? (category breakdown)",
+      date: "2024–2026 reporting",
+      url: "https://www.bbc.com/sport/football/articles/c74j4z10w97o"
+    },
+    {
+      id: "ap-nbc-114",
+      name: "Associated Press / NBC — Man City guilty of almost all the 115 financial charges",
+      date: "29 Sep 2026",
+      url: "https://www.nbcnews.com/sports/soccer/man-city-guilty-almost-115-financial-charges-premier-league-says-rcna600523"
+    }
+  ];
+
+  function sourceById(id) {
+    for (var i = 0; i < SOURCES.length; i++) if (SOURCES[i].id === id) return SOURCES[i];
+    return null;
+  }
+
+  function sourceHtml(ids) {
+    if (!Array.isArray(ids)) ids = [ids];
+    return ids.map(function (id) {
+      var s = sourceById(id);
+      if (!s) return "";
+      return '<a class="source-link" href="' + s.url + '" target="_blank" rel="noopener noreferrer">' +
+        s.name + " (" + s.date + ")</a>";
+    }).join("<br>");
+  }
+
+  /* ---------- Charge counter data (representative sample across 115) ---------- */
+  var CATEGORIES = [
+    {
+      key: "fininfo",
+      label: "Accurate financial information",
+      count: 54,
+      rule: "Premier League rules require clubs to provide accurate financial information that gives a true and fair view of the club’s financial position — including in accounts and regulatory returns.",
+      accused: "The commission found that between 2009/10 and 2017/18 City arranged ‘sham’ contracts with commercial partners and relied on other ‘sham’ arrangements to inflate revenues and cut costs by more than £900m, filing misstated accounts that concealed the true state of the finances from auditors and regulators.",
+      status: "proven",
+      statusLabel: "Proven by independent commission",
+      sources: ["pl-2026-09-29", "bbc-web", "guardian-2026-09-29"]
+    },
+    {
+      key: "pay",
+      label: "Player and manager payments",
+      count: 14,
+      rule: "Employment and remuneration arrangements for players and managers must be accurately recorded so regulators can see the club’s true wage costs and liabilities.",
+      accused: "The commission upheld charges that remuneration was routed through third-party / consultancy arrangements rather than employment contracts — wrongly excluding expenses of about £8.9m, £7.4m and £0.5m. Names of the three former employees remain redacted in the public Core Decision; reporting has linked the pattern to senior figures of that era.",
+      status: "proven",
+      statusLabel: "Proven by independent commission",
+      sources: ["pl-2026-09-29", "bbc-web", "guardian-2026-09-29"]
+    },
+    {
+      key: "uefa",
+      label: "UEFA FFP compliance reporting",
+      count: 5,
+      rule: "Clubs in UEFA competitions must comply with Club Licensing and Financial Fair Play rules and must not submit misleading figures to that regime.",
+      accused: "The commission found City significantly breached UEFA spending limits in the charged seasons because, once ‘tagged’ owner-funded sponsorship sums and other devices were stripped out, the accounts no longer supported compliance.",
+      status: "proven",
+      statusLabel: "Proven by independent commission",
+      sources: ["pl-2026-09-29", "guardian-2026-09-29"]
+    },
+    {
+      key: "psr",
+      label: "Premier League PSR",
+      count: 7,
+      rule: "Profitability and Sustainability Rules cap aggregated adjusted losses over a rolling assessment period. Figures submitted for PSR must reflect economic substance.",
+      accused: "The commission found that inaccurate reporting of income and expenditure meant City failed PSR requirements for the charged seasons (public reporting of the referral listed seasons including 2015/16–2017/18).",
+      status: "proven",
+      statusLabel: "Proven by independent commission",
+      sources: ["pl-2026-09-29", "bbc-charges-breakdown", "bbc-2026-09-25"]
+    },
+    {
+      key: "coop",
+      label: "Co-operation / utmost good faith",
+      count: 35,
+      rule: "Clubs owe duties of co-operation and utmost good faith to the Premier League during investigations — including honest evidence and not frustrating the inquiry.",
+      accused: "The League charged multiple co-operation breaches covering Dec 2018–Feb 2023. The commission upheld the majority (the Premier League statement says three of four alleged breaches of those duties were upheld) and concluded the club ‘made concerted efforts to stop and frustrate’ the investigation. One co-operation-related charge was not proved. Some witnesses were found to have given false or knowingly untrue evidence.",
+      status: "proven",
+      statusLabel: "Majority proven · one not proved",
+      sources: ["pl-2026-09-29", "bbc-2026-09-29", "ap-nbc-114"]
+    }
+  ];
+
+  /* Build 115 scroll ticks: map index → category sentence */
+  var TICKS = [];
+  CATEGORIES.forEach(function (cat) {
+    for (var i = 0; i < cat.count; i++) {
+      TICKS.push({
+        n: TICKS.length + 1,
+        cat: cat,
+        sentence: cat.count + "× " + cat.label + " — " + (
+          cat.key === "fininfo" ? "Accounts that did not show a true and fair view (2009/10–2017/18)." :
+          cat.key === "pay" ? "Payments to players/managers not accurately detailed." :
+          cat.key === "uefa" ? "UEFA FFP / licensing figures that did not match economic substance." :
+          cat.key === "psr" ? "Premier League PSR figures dependent on the same misstatements." :
+          "Failure to co-operate with the League’s investigation (Dec 2018–Feb 2023)."
+        )
+      });
+    }
+  });
+
+  var chargeNumEl = document.getElementById("chargeNum");
+  var chargeSentenceEl = document.getElementById("chargeSentence");
+  var chargeBar = document.getElementById("chargeBar");
+  var chargeOf = document.getElementById("chargeOf");
+  var currentTick = 0;
+  var displayedN = 0;
+
+  function setChargeDisplay(n) {
+    n = Math.max(0, Math.min(115, n | 0));
+    displayedN = n;
+    chargeNumEl.textContent = String(n);
+    if (n === 0) {
+      chargeSentenceEl.textContent = "Scroll through this section. The number climbs one referred charge at a time across the five published categories.";
+      chargeOf.textContent = "of 115 referred · Feb 2023";
+    } else {
+      var tick = TICKS[n - 1];
+      chargeSentenceEl.textContent = tick.sentence;
+      var provenNote = (tick.cat.key === "coop")
+        ? " · majority of co-operation charges later proved"
+        : " · financial category later proved by commission";
+      chargeOf.textContent = "Charge " + n + " of 115 · " + tick.cat.label + provenNote;
+    }
+    chargeBar.style.width = ((n / 115) * 100) + "%";
+  }
+
+  function updateCounterFromScroll() {
+    var sec = document.getElementById("counter");
+    var rect = sec.getBoundingClientRect();
+    var scrollable = sec.offsetHeight - window.innerHeight;
+    if (scrollable <= 0) { setChargeDisplay(115); return; }
+    var progressed = Math.min(scrollable, Math.max(0, -rect.top));
+    var t = progressed / scrollable;
+    var n = Math.round(t * 115);
+    if (n !== currentTick) {
+      currentTick = n;
+      setChargeDisplay(n);
+    }
+  }
+
+  window.addEventListener("scroll", updateCounterFromScroll, { passive: true });
+  window.addEventListener("resize", updateCounterFromScroll);
+  setChargeDisplay(0);
+
+  /* Side panel */
+  var panel = document.getElementById("chargePanel");
+  var backdrop = document.getElementById("backdrop");
+  var panelTitle = document.getElementById("panelTitle");
+  var panelStatus = document.getElementById("panelStatus");
+  var panelRule = document.getElementById("panelRule");
+  var panelAccused = document.getElementById("panelAccused");
+  var panelSource = document.getElementById("panelSource");
+
+  function openPanelForTick(n) {
+    var cat;
+    if (n <= 0) {
+      cat = {
+        label: "The 115 charges — overview",
+        rule: "In February 2023 the Premier League issued a complaint under Section W and referred Manchester City to an independent commission over more than 100 alleged individual breaches across four broad charge categories (often summarised as five buckets including co-operation).",
+        accused: "As of 29 September 2026 the commission has published a redacted Core Decision finding City guilty of all charges related to serious financial-rule breaches over nine seasons, and the majority of co-operation charges. Sanctions will be decided in a separate private hearing. The club has until 2 October 2026 to appeal the findings and says it will pursue appeal avenues.",
+        status: "proven",
+        statusLabel: "Liability proved · sanction pending · appeal window open",
+        sources: ["pl-2026-09-29", "bbc-2026-09-29", "sky-next"]
+      };
+    } else {
+      cat = TICKS[Math.min(114, n - 1)].cat;
+    }
+    panelTitle.textContent = cat.label;
+    panelStatus.textContent = cat.statusLabel;
+    panelStatus.className = "status-pill " + (cat.status === "proven" ? "proven" : "alleged");
+    panelRule.textContent = cat.rule;
+    panelAccused.textContent = cat.accused;
+    panelSource.innerHTML = sourceHtml(cat.sources);
+    panel.hidden = false;
+    backdrop.hidden = false;
+    requestAnimationFrame(function () {
+      panel.classList.add("open");
+      backdrop.classList.add("open");
+    });
+    chargeNumEl.setAttribute("aria-expanded", "true");
+    document.getElementById("panelClose").focus();
+  }
+
+  function closePanel() {
+    panel.classList.remove("open");
+    backdrop.classList.remove("open");
+    chargeNumEl.setAttribute("aria-expanded", "false");
+    setTimeout(function () {
+      panel.hidden = true;
+      if (!document.getElementById("sourcesDrawer").classList.contains("open")) {
+        backdrop.hidden = true;
+      }
+    }, 280);
+  }
+
+  chargeNumEl.addEventListener("click", function () { openPanelForTick(displayedN); });
+  document.getElementById("panelClose").addEventListener("click", closePanel);
+  backdrop.addEventListener("click", function () {
+    closePanel();
+    closeSources();
+    closeMapCard();
+  });
+
+  /* ---------- Timeline ---------- */
+  var TIMELINE = [
+    {
+      date: "1–23 Sep 2008",
+      title: "Abu Dhabi United Group takeover",
+      body: "ADUG completes the purchase of Manchester City. Sheikh Mansour’s ownership begins the commercial era the later case examines.",
+      tag: null,
+      tagLabel: null
+    },
+    {
+      date: "2009 onwards",
+      title: "Etihad and Abu Dhabi commercial deals",
+      body: "Shirt and wider Abu Dhabi sponsorships expand; stadium naming rights with Etihad follow in 2011. These commercial years sit inside the later charged window (2009/10–2017/18).",
+      tag: null,
+      tagLabel: null
+    },
+    {
+      date: "Nov 2018",
+      title: "Football Leaks / Der Spiegel",
+      body: "Der Spiegel publishes internal emails alleging owner funding was routed through sponsors such as Etihad and Etisalat to inflate reported commercial income.",
+      tag: "alleged",
+      tagLabel: "Alleged (investigative reporting)"
+    },
+    {
+      date: "Dec 2018",
+      title: "Premier League investigation opens",
+      body: "The League begins its investigation into Manchester City (stated in the 29 Sep 2026 Premier League notes).",
+      tag: null,
+      tagLabel: null
+    },
+    {
+      date: "Feb 2020",
+      title: "UEFA ban and fine announced",
+      body: "UEFA’s CFCB adjudicatory chamber announces a two-year European ban and a €30m fine over alleged FFP breaches and obstruction.",
+      tag: "panel",
+      tagLabel: "UEFA finding (later appealed)"
+    },
+    {
+      date: "13 Jul 2020",
+      title: "CAS overturns the UEFA ban",
+      body: "The Court of Arbitration for Sport lifts the two-year ban. Allegations of disguised sponsorship funding are found unproven or time-barred; a €10m fine remains for failing to co-operate with UEFA’s investigation.",
+      tag: "overturned",
+      tagLabel: "Ban overturned · €10m fine stood"
+    },
+    {
+      date: "Feb 2023",
+      title: "Premier League refers 115 charges",
+      body: "Following a multi-year investigation, the League issues a Section W complaint. Public breakdowns list 54 + 14 + 5 + 7 + 35 charges across financial information, player/manager pay, UEFA rules, PSR and co-operation.",
+      tag: "alleged",
+      tagLabel: "Alleged at referral"
+    },
+    {
+      date: "Sep–Dec 2024",
+      title: "Independent commission hearing",
+      body: "A 42-day hearing (League statement) / roughly ten-to-twelve-week closed hearing runs and concludes in December 2024.",
+      tag: "panel",
+      tagLabel: "Still before the panel"
+    },
+    {
+      date: "25 Sep 2026",
+      title: "Verdict reports surface",
+      body: "BBC Sport and The Athletic report that the commission has found City guilty on almost all charges; sanctions not yet decided.",
+      tag: "panel",
+      tagLabel: "Reported · awaiting publication"
+    },
+    {
+      date: "29 Sep 2026",
+      title: "Core Decision published",
+      body: "The Premier League publishes a redacted Core Decision: all serious financial-rule charges proved; majority of co-operation charges proved. Sanction hearing still to come. Appeal deadline 2 Oct 2026. City disputes the opinion and says it will appeal.",
+      tag: "proven",
+      tagLabel: "Proven (liability) · sanction pending"
+    },
+    {
+      date: "30 Sep 2026",
+      title: "Today",
+      body: "No published City sanction. Appeal window still open until Friday 2 October 2026.",
+      tag: "panel",
+      tagLabel: "Sanction still ahead"
+    }
+  ];
+
+  var rail = document.getElementById("timelineRail");
+  TIMELINE.forEach(function (item) {
+    var card = document.createElement("article");
+    card.className = "t-card";
+    var tagHtml = item.tag
+      ? '<div class="tag"><span class="status-pill ' + item.tag + '">' + item.tagLabel + "</span></div>"
+      : "";
+    card.innerHTML =
+      '<div class="t-date">' + item.date + "</div>" +
+      "<h3>" + item.title + "</h3>" +
+      "<p>" + item.body + "</p>" + tagHtml;
+    rail.appendChild(card);
+  });
+
+  (function enableDragScroll() {
+    var el = document.getElementById("timelineTrack");
+    var down = false, startX = 0, scrollLeft = 0;
+    el.addEventListener("mousedown", function (e) {
+      down = true;
+      el.classList.add("dragging");
+      startX = e.pageX - el.offsetLeft;
+      scrollLeft = el.scrollLeft;
+    });
+    window.addEventListener("mouseup", function () {
+      down = false;
+      el.classList.remove("dragging");
+    });
+    el.addEventListener("mouseleave", function () {
+      down = false;
+      el.classList.remove("dragging");
+    });
+    el.addEventListener("mousemove", function (e) {
+      if (!down) return;
+      e.preventDefault();
+      var x = e.pageX - el.offsetLeft;
+      el.scrollLeft = scrollLeft - (x - startX);
+    });
+  })();
+
+  /* ---------- Sponsor map ---------- */
+  var NODES = [
+    {
+      id: "city",
+      label: "Manchester City",
+      x: 50, y: 48, hub: true,
+      title: "Manchester City FC",
+      html:
+        "<p><strong>Why in the case:</strong> Subject of the Premier League complaint and the independent commission’s Core Decision covering seasons 2009/10–2017/18.</p>" +
+        "<p><strong>What the rules expect:</strong> True and fair financial reporting; compliance with PSR and (where applicable) UEFA FFP; co-operation and utmost good faith with League investigations.</p>" +
+        "<p><strong>Gap found:</strong> Systematic use of a ‘Disguised Funding Scheme’ and other devices to inflate commercial income and understate costs by more than £900m, plus majority co-operation breaches.</p>" +
+        "<p>" + sourceHtml(["pl-2026-09-29", "bbc-web"]) + "</p>"
+    },
+    {
+      id: "adug",
+      label: "ADUG",
+      x: 18, y: 28,
+      title: "Abu Dhabi United Group (ADUG)",
+      html:
+        "<p><strong>Why in the case:</strong> Named in the Premier League statement as the owner entity that funded ‘tagged’ sponsorship sums and other sham arrangements.</p>" +
+        "<p><strong>What the rules expect:</strong> Owner equity is not the same as genuine third-party commercial revenue for FFP/PSR purposes; economic substance must be reported honestly.</p>" +
+        "<p><strong>Gap found:</strong> Of £949.94m booked as Abu Dhabi sponsorship income, only £119.25m was ‘base’ sponsor fees; £830.69m were tagged sums paid by ADUG.</p>" +
+        "<p>" + sourceHtml(["pl-2026-09-29", "guardian-2026-09-29", "bbc-web"]) + "</p>"
+    },
+    {
+      id: "sponsors",
+      label: "Abu Dhabi sponsors",
+      x: 78, y: 26,
+      title: "Abu Dhabi sponsors (as a class)",
+      html:
+        "<p><strong>Why in the case:</strong> The Core Decision finds sponsorship agreements with Abu Dhabi partners were shams: sponsors paid only a base fee; ADUG paid the rest while the club booked the full fee as commercial income.</p>" +
+        "<p><strong>What the rules expect:</strong> Sponsorship income in accounts and regulatory returns must reflect what the sponsor — not the owner — actually pays at fair economic substance.</p>" +
+        "<p><strong>Gap found:</strong> Artificial inflation of commercial revenues so the club appeared closer to spending-limit compliance.</p>" +
+        "<p>" + sourceHtml(["pl-2026-09-29", "guardian-2026-09-29"]) + "</p>"
+    },
+    {
+      id: "etihad",
+      label: "Etihad",
+      x: 82, y: 58,
+      title: "Etihad Airways (publicly named earlier)",
+      html:
+        "<p><strong>Why on this map:</strong> Named in Der Spiegel’s Football Leaks reporting and in UEFA’s earlier CFCB case as a sponsorship through which owner funds were allegedly routed. The League’s redacted Core Decision summary refers to Abu Dhabi sponsors as a class rather than listing this brand in the public excerpts reviewed here.</p>" +
+        "<p><strong>What the rules expect:</strong> Shirt/stadium sponsors must actually bear the contractual fee they are said to pay.</p>" +
+        "<p><strong>Gap claimed in earlier reporting:</strong> Internal emails described large ‘ADUG-funded’ portions of Etihad-linked fees. Etihad has previously said financial obligations under the partnership were its sole liability.</p>" +
+        "<p>" + sourceHtml(["spiegel-2018", "bbc-cas-2020", "guardian-cas-2020"]) + "</p>"
+    },
+    {
+      id: "etisalat",
+      label: "Etisalat",
+      x: 68, y: 78,
+      title: "Etisalat (publicly named earlier)",
+      html:
+        "<p><strong>Why on this map:</strong> Named by Der Spiegel and examined in UEFA proceedings (some Etisalat-period allegations were treated as time-barred at CAS). Not individually listed in the Premier League’s public Core Decision excerpts summarised by major outlets on 29 Sep 2026.</p>" +
+        "<p><strong>What the rules expect:</strong> Same as other related-party commercial income: substance over labelling.</p>" +
+        "<p><strong>Gap claimed in earlier reporting:</strong> Owner/state-linked funding alleged to have underwritten ‘sponsorship’ booked as commercial revenue.</p>" +
+        "<p>" + sourceHtml(["spiegel-etisalat", "guardian-cas-2020"]) + "</p>"
+    },
+    {
+      id: "fordham",
+      label: "Fordham",
+      x: 22, y: 72,
+      title: "Fordham Arrangement",
+      html:
+        "<p><strong>Why in the case:</strong> Named in the Core Decision / League statement as a third party that acquired players’ image rights in what the commission called little more than a front for ADUG.</p>" +
+        "<p><strong>What the rules expect:</strong> Operating income and expenses must not be dressed up through circular owner-funded vehicles.</p>" +
+        "<p><strong>Gap found:</strong> About £24.5m wrongly recorded as operating income and £49.414m wrongly excluded from operating expenses.</p>" +
+        "<p>" + sourceHtml(["pl-2026-09-29", "sky-fordham", "bbc-web"]) + "</p>"
+    }
+  ];
+
+  /* Lines only where the published case (or clear public allegation chain) connects parties */
+  var LINES = [
+    ["adug", "city"],      /* tagged funding into club — PL Core Decision */
+    ["adug", "sponsors"],  /* ADUG funded tagged sums via sponsors — PL */
+    ["sponsors", "city"],  /* sham sponsorship contracts — PL */
+    ["adug", "fordham"],   /* Fordham a front for ADUG — PL/Sky */
+    ["fordham", "city"],   /* image-rights circular arrangement — PL */
+    ["etihad", "city"],    /* only as publicly alleged sponsor relationship — Spiegel/UEFA */
+    ["etisalat", "city"]   /* only as publicly alleged sponsor relationship — Spiegel/UEFA */
+  ];
+
+  var mapStage = document.getElementById("mapStage");
+  var mapLines = document.getElementById("mapLines");
+  var mapCard = document.getElementById("mapCard");
+  var nodeEls = {};
+
+  NODES.forEach(function (n) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "node" + (n.hub ? " hub" : "");
+    btn.textContent = n.label;
+    btn.style.left = n.x + "%";
+    btn.style.top = n.y + "%";
+    btn.setAttribute("aria-label", n.title);
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      openMapCard(n);
+    });
+    mapStage.appendChild(btn);
+    nodeEls[n.id] = btn;
+  });
+
+  function drawLines() {
+    var w = mapStage.clientWidth;
+    var h = mapStage.clientHeight;
+    mapLines.setAttribute("viewBox", "0 0 " + w + " " + h);
+    mapLines.innerHTML = "";
+    LINES.forEach(function (pair) {
+      var a = nodeEls[pair[0]];
+      var b = nodeEls[pair[1]];
+      if (!a || !b) return;
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", a.offsetLeft + a.offsetWidth / 2);
+      line.setAttribute("y1", a.offsetTop + a.offsetHeight / 2);
+      line.setAttribute("x2", b.offsetLeft + b.offsetWidth / 2);
+      line.setAttribute("y2", b.offsetTop + b.offsetHeight / 2);
+      mapLines.appendChild(line);
+    });
+  }
+
+  function openMapCard(n) {
+    document.getElementById("mapCardTitle").textContent = n.title;
+    document.getElementById("mapCardBody").innerHTML = n.html;
+    mapCard.classList.add("show");
+  }
+  function closeMapCard() {
+    mapCard.classList.remove("show");
+  }
+  document.getElementById("mapCardClose").addEventListener("click", function (e) {
+    e.stopPropagation();
+    closeMapCard();
+  });
+  mapStage.addEventListener("click", function () { closeMapCard(); });
+  window.addEventListener("resize", drawLines);
+  requestAnimationFrame(drawLines);
+  setTimeout(drawLines, 100);
+
+  /* ---------- Sanction scale (OTHER clubs only) ---------- */
+  var STEPS = [
+    {
+      label: "Nottingham Forest · PSR",
+      points: "4 points",
+      pointsSub: "Forest — breach £34.5m over £61m threshold; early plea mitigation from 6 to 4 (2024).",
+      transfer: "None published",
+      transferSub: "This Forest PSR award was a points deduction, not a transfer ban.",
+      fine: "None published",
+      fineSub: "No PL fine attached to this Forest PSR decision in the cited reporting.",
+      sourceNote: "BBC Sport / PL process coverage"
+    },
+    {
+      label: "Everton · second PSR (FY23)",
+      points: "2 points",
+      pointsSub: "Everton — immediate two-point deduction for a further PSR breach (~£16.6m over threshold).",
+      transfer: "None published",
+      transferSub: "Points only in the published FY23 decision summarised publicly.",
+      fine: "None published",
+      fineSub: "Sanction reported as points, not a headline fine.",
+      sourceNote: "Commission decision coverage · BBC timeline"
+    },
+    {
+      label: "Everton · first PSR (after appeal)",
+      points: "6 points",
+      pointsSub: "Everton — original 10-point deduction reduced to 6 on appeal (26 Feb 2024) for FY22 PSR breach.",
+      transfer: "None published",
+      transferSub: "Appeal Board substituted points only.",
+      fine: "None published",
+      fineSub: "Published outcome was the points variation.",
+      sourceNote: "Premier League statement 26 Feb 2024"
+    },
+    {
+      label: "Leicester City · PSR (Championship)",
+      points: "6 points",
+      pointsSub: "Leicester — six-point deduction upheld on appeal (8 Apr 2026) for P&S breach ending 2023/24.",
+      transfer: "None published",
+      transferSub: "Published award centred on points.",
+      fine: "None published",
+      fineSub: "No separate fine highlighted in the League appeal statement.",
+      sourceNote: "Premier League statement 8 Apr 2026"
+    },
+    {
+      label: "Everton · first PSR (original award)",
+      points: "10 points",
+      pointsSub: "Everton — independent commission’s original immediate 10-point deduction (Nov 2023), later cut to 6 on appeal.",
+      transfer: "None published",
+      transferSub: "Original award was points.",
+      fine: "None published",
+      fineSub: "Points were the sporting sanction published.",
+      sourceNote: "Premier League / appeal board record"
+    },
+    {
+      label: "Chelsea · financial reporting / TPI (2026)",
+      points: "0 points",
+      pointsSub: "Chelsea — PL satisfied PSR would not have been breached once payments were included; no points deduction in the sanction agreement.",
+      transfer: "Suspended 1-year first-team ban · 9-month academy ban",
+      transferSub: "Immediate nine-month academy registration ban; one-year first-team transfer ban suspended for two years (self-reporting mitigation).",
+      fine: "£10.75 million",
+      fineSub: "£10m (financial reporting / third-party investment) + £750k (youth development). Highest PL fine to date per League notes.",
+      sourceNote: "Premier League statement 16 Mar 2026"
+    }
+  ];
+
+  var slider = document.getElementById("sanctionSlider");
+  var markers = document.getElementById("scaleMarkers");
+  STEPS.forEach(function (s, i) {
+    var span = document.createElement("span");
+    span.textContent = (i + 1) + ". " + s.label;
+    markers.appendChild(span);
+  });
+
+  function renderSanction(i) {
+    var s = STEPS[i];
+    document.getElementById("sliderPos").textContent = (i + 1) + " / " + STEPS.length;
+    document.getElementById("roPoints").textContent = s.points;
+    document.getElementById("roPointsSub").textContent = s.pointsSub;
+    document.getElementById("roTransfer").textContent = s.transfer;
+    document.getElementById("roTransferSub").textContent = s.transferSub;
+    document.getElementById("roFine").textContent = s.fine;
+    document.getElementById("roFineSub").textContent = s.fineSub;
+  }
+  slider.addEventListener("input", function () { renderSanction(+slider.value); });
+  renderSanction(0);
+
+  /* ---------- Sources drawer ---------- */
+  var sourcesDrawer = document.getElementById("sourcesDrawer");
+  var sourcesList = document.getElementById("sourcesList");
+  SOURCES.forEach(function (s) {
+    var row = document.createElement("div");
+    row.className = "source-row";
+    row.innerHTML =
+      '<div class="name">' + s.name + "</div>" +
+      '<div class="meta">' + s.date + "</div>" +
+      '<a href="' + s.url + '" target="_blank" rel="noopener noreferrer">' + s.url + "</a>";
+    sourcesList.appendChild(row);
+  });
+
+  function openSources() {
+    sourcesDrawer.hidden = false;
+    backdrop.hidden = false;
+    requestAnimationFrame(function () {
+      sourcesDrawer.classList.add("open");
+      backdrop.classList.add("open");
+    });
+    document.getElementById("sourcesOpen").setAttribute("aria-expanded", "true");
+  }
+  function closeSources() {
+    sourcesDrawer.classList.remove("open");
+    document.getElementById("sourcesOpen").setAttribute("aria-expanded", "false");
+    setTimeout(function () {
+      sourcesDrawer.hidden = true;
+      if (!panel.classList.contains("open")) backdrop.hidden = true;
+    }, 280);
+  }
+  document.getElementById("sourcesOpen").addEventListener("click", function () {
+    if (sourcesDrawer.classList.contains("open")) closeSources();
+    else openSources();
+  });
+  document.getElementById("sourcesClose").addEventListener("click", closeSources);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closePanel();
+      closeSources();
+      closeMapCard();
+    }
+  });
+})();
+</script>
+</body>
+</html>
