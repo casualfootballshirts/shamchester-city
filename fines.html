@@ -13,7 +13,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shamchester City — What the rest of the league could claim</title>
-<meta name="description" content="A satirical hypothetical calculator of invented claims other clubs could make about Manchester City. Illustrative only. Not a real fine, legal claim, or prediction.">
+<meta name="description" content="A hypothetical calculator of invented claims other clubs could make about Manchester City. Illustrative only. Not a real fine, legal claim, or prediction.">
 <style>
   :root {
     --sky: #6CABDD;
@@ -53,7 +53,7 @@
   }
 
   .masthead {
-    background: linear-gradient(180deg, #6CABDD 0%, #5BA0D4 55%, #4E94C8 100%);
+    background: #6CABDD;
     color: #fff;
     border-bottom: 4px solid var(--ink);
     padding: 1.25rem 0 0;
@@ -69,8 +69,8 @@
     display: flex; flex-direction: column; align-items: center;
     gap: 0.85rem; margin: 0.85rem 0 0.5rem;
   }
-  .logo-roundel {
-    width: clamp(96px, 24vw, 128px);
+  .logo-badge {
+    width: clamp(220px, 72vw, 420px);
     height: auto; display: block;
     filter: drop-shadow(0 4px 0 rgba(28,44,91,0.25));
   }
@@ -106,7 +106,7 @@
   }
 
   .hero-total {
-    background: linear-gradient(180deg, #6CABDD 0%, #4E94C8 40%, #1C2C5B 100%);
+    background: #6CABDD;
     color: #fff; padding: 2.5rem 0 3rem; text-align: center;
   }
   .hero-total .section-label {
@@ -313,28 +313,18 @@
       <span id="mastDate"></span>
     </div>
     <div class="masthead-brand">
-<svg class="logo-roundel" viewBox="0 0 200 200" role="img" aria-label="Shamchester City badge" xmlns="http://www.w3.org/2000/svg">
+<svg class="logo-badge" viewBox="0 0 520 120" role="img" aria-label="Shamchester City badge" xmlns="http://www.w3.org/2000/svg">
         <title>Shamchester City</title>
-        <circle cx="100" cy="100" r="98" fill="#1C2C5B"/>
-        <circle cx="100" cy="100" r="91" fill="#6CABDD"/>
-        <circle cx="100" cy="100" r="70" fill="#FFFFFF"/>
-        <circle cx="100" cy="100" r="64" fill="none" stroke="#1C2C5B" stroke-width="2.5"/>
-        <defs>
-          <path id="scRingTop" d="M 28,108 A 72,72 0 0,1 172,108" fill="none"/>
-          <path id="scRingBot" d="M 34,118 A 70,70 0 0,0 166,118" fill="none"/>
-        </defs>
-        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="13.5" font-weight="800" letter-spacing="3.2">
-          <textPath href="#scRingTop" startOffset="50%" text-anchor="middle">SHAMCHESTER</textPath>
-        </text>
-        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="14" font-weight="800" letter-spacing="5">
-          <textPath href="#scRingBot" startOffset="50%" text-anchor="middle">CITY</textPath>
-        </text>
-        <circle cx="100" cy="100" r="46" fill="none" stroke="#6CABDD" stroke-width="3.5"/>
-        <text x="100" y="112" text-anchor="middle" fill="#1C2C5B" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.5">SC</text>
+        <!-- Original rectangular wordmark badge. Inspired by the idea of a wide boxed logo, not an Oasis mark. -->
+        <rect x="4" y="4" width="512" height="112" fill="#FFFFFF" stroke="#1C2C5B" stroke-width="8"/>
+        <rect x="16" y="16" width="488" height="88" fill="#6CABDD" stroke="#1C2C5B" stroke-width="3"/>
+        <text x="260" y="78" text-anchor="middle" fill="#1C2C5B"
+          font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif"
+          font-size="52" font-weight="900" letter-spacing="6">SHAMCHESTER CITY</text>
       </svg>
       <h1>Sham<span>chester</span> City</h1>
     </div>
-    <p class="deck">What the rest of the league could claim — a satirical calculator.</p>
+    <p class="deck">What the rest of the league could claim, if you ran the numbers this way.</p>
     <nav class="nav-mini" aria-label="Site">
       <a href="index.html">Home</a>
       <a href="fines.html" aria-current="page">Fines</a>
@@ -347,7 +337,7 @@
   <div class="disclaimer">
     <div class="wrap">
       <strong>Disclaimer:</strong>
-      This page is illustrative only. The rates below were invented by the site owner for satire.
+      This page is illustrative only. The rates below were invented by the site owner.
       They are not what any club is owed, not a Premier League sanction, not a legal claim, and not a prediction.
       Figures use real league tables and cup finals; the money is make-believe.
       Not affiliated with Manchester City Football Club or the Premier League.
@@ -375,9 +365,9 @@
 
 <section id="rules">
   <div class="wrap">
-    <p class="section-label">The invented tariff</p>
-    <h2>How the satire is scored</h2>
-    <p class="lede">British spelling. Pounds sterling. Interest compounds daily at 4% a year from 1 July after each season until the day you open this page. Seasons: every Premier League campaign Manchester City have played from 2008–09 through 2017–18.</p>
+    <p class="section-label">The rules</p>
+    <h2>How the total is scored</h2>
+    <p class="lede">Interest compounds daily at 4% a year from 1 July after each season until the day you open this page. Only Premier League seasons from 2008–09 through 2017–18 are included. The pound amounts are the invented rates below.</p>
     <div class="rules-grid">
       <article class="rule-card">
         <h3>Finished below City</h3>
@@ -448,11 +438,8 @@
   <div class="wrap">
     <p class="brand">Shamchester City</p>
     <p class="domain">shamchester-city.co.uk</p>
-    <p style="margin:0.8rem 0 0;max-width:36rem;">
-      A self-contained prototype. British English. Offline-capable except source links.
-      <a href="index.html">Back to the charges brief</a>.
-    </p>
     <p style="margin:0.8rem 0 0;max-width:40rem;">
+      <a href="index.html">Back to the charges brief</a>.
       This website was built by Manchester United supporters at <a href="https://casualfootballshirts.co.uk">casualfootballshirts.co.uk</a> and is just a bit of fun. All figures are an estimation.
     </p>
   </div>

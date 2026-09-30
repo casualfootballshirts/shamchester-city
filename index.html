@@ -12,8 +12,8 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shamchester City — The Premier League charges, not the sanction</title>
-<meta name="description" content="A satirical one-page brief on Manchester City’s Premier League financial charges. Allegations and commission findings with sources. Not affiliated with the club or the League.">
+<title>Shamchester City — The Premier League charges</title>
+<meta name="description" content="Manchester City’s Premier League financial charges explained: allegations, commission findings and sources. Not affiliated with the club or the League.">
 <style>
   :root {
     --sky: #6CABDD;
@@ -59,7 +59,7 @@
 
   /* Masthead */
   .masthead {
-    background: linear-gradient(180deg, #6CABDD 0%, #5BA0D4 55%, #4E94C8 100%);
+    background: #6CABDD;
     color: #fff;
     border-bottom: 4px solid var(--ink);
     padding: 1.25rem 0 0;
@@ -78,8 +78,8 @@
     gap: 0.85rem;
     margin: 0.85rem 0 0.5rem;
   }
-  .logo-roundel {
-    width: clamp(112px, 28vw, 148px);
+  .logo-badge {
+    width: clamp(220px, 72vw, 420px);
     height: auto;
     display: block;
     filter: drop-shadow(0 4px 0 rgba(28,44,91,0.25));
@@ -162,8 +162,7 @@
     min-height: 180vh;
     padding: 0;
     position: relative;
-    background:
-      linear-gradient(180deg, #6CABDD 0%, #5BA3D6 35%, #3F7FB0 70%, #1C2C5B 100%);
+    background: #6CABDD;
     color: #fff;
   }
   .counter-sticky {
@@ -343,7 +342,7 @@
     position: absolute;
     left: 0; right: 0; top: 1.05rem;
     height: 3px;
-    background: linear-gradient(90deg, #1C2C5B, #6CABDD, #1C2C5B);
+    background: #6CABDD;
   }
   .t-card {
     width: min(260px, 72vw);
@@ -385,7 +384,7 @@
   #sponsors { background: var(--paper); }
   .map-stage {
     position: relative;
-    background: linear-gradient(160deg, #1C2C5B 0%, #243A6B 45%, #2F4F82 100%);
+    background: #1C2C5B;
     color: #fff;
     border: 2px solid #6CABDD;
     border-radius: 4px;
@@ -461,7 +460,7 @@
   }
 
   /* Sanction scale */
-  #sanctions { background: linear-gradient(180deg, #6CABDD 0%, #4E94C8 40%, #1C2C5B 100%); color: #fff; }
+  #sanctions { background: #6CABDD; color: #fff; }
   #sanctions .section-label { color: #EAF4FB; }
   #sanctions .lede { color: #EAF4FB; }
   #sanctions h2 { color: #fff; }
@@ -485,7 +484,7 @@
   input[type="range"] {
     -webkit-appearance: none; appearance: none;
     width: 100%; height: 6px;
-    background: linear-gradient(90deg, #1C2C5B, #FFFFFF);
+    background: #1C2C5B;
     border-radius: 999px; outline: none;
   }
   input[type="range"]::-webkit-slider-thumb {
@@ -672,31 +671,18 @@
       <span>30 September 2026</span>
     </div>
     <div class="masthead-brand">
-      <svg class="logo-roundel" viewBox="0 0 200 200" role="img" aria-label="Shamchester City badge" xmlns="http://www.w3.org/2000/svg">
+      <svg class="logo-badge" viewBox="0 0 520 120" role="img" aria-label="Shamchester City badge" xmlns="http://www.w3.org/2000/svg">
         <title>Shamchester City</title>
-        <!-- Original circular roundel (Oasis-style badge idea only). City blue #6CABDD, white, navy. Not an Oasis mark. -->
-        <circle cx="100" cy="100" r="98" fill="#1C2C5B"/>
-        <circle cx="100" cy="100" r="91" fill="#6CABDD"/>
-        <circle cx="100" cy="100" r="70" fill="#FFFFFF"/>
-        <circle cx="100" cy="100" r="64" fill="none" stroke="#1C2C5B" stroke-width="2.5"/>
-        <defs>
-          <!-- Top arc left-to-right for SHAMCHESTER -->
-          <path id="scRingTop" d="M 28,108 A 72,72 0 0,1 172,108" fill="none"/>
-          <!-- Bottom arc left-to-right (underneath) for CITY -->
-          <path id="scRingBot" d="M 34,118 A 70,70 0 0,0 166,118" fill="none"/>
-        </defs>
-        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="13.5" font-weight="800" letter-spacing="3.2">
-          <textPath href="#scRingTop" xlink:href="#scRingTop" startOffset="50%" text-anchor="middle">SHAMCHESTER</textPath>
-        </text>
-        <text fill="#FFFFFF" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="14" font-weight="800" letter-spacing="5">
-          <textPath href="#scRingBot" xlink:href="#scRingBot" startOffset="50%" text-anchor="middle">CITY</textPath>
-        </text>
-        <circle cx="100" cy="100" r="46" fill="none" stroke="#6CABDD" stroke-width="3.5"/>
-        <text x="100" y="112" text-anchor="middle" fill="#1C2C5B" font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.5">SC</text>
+        <!-- Original rectangular wordmark badge. Inspired by the idea of a wide boxed logo, not an Oasis mark. -->
+        <rect x="4" y="4" width="512" height="112" fill="#FFFFFF" stroke="#1C2C5B" stroke-width="8"/>
+        <rect x="16" y="16" width="488" height="88" fill="#6CABDD" stroke="#1C2C5B" stroke-width="3"/>
+        <text x="260" y="78" text-anchor="middle" fill="#1C2C5B"
+          font-family="Arial Narrow, Helvetica Condensed, Franklin Gothic Medium, Segoe UI, sans-serif"
+          font-size="52" font-weight="900" letter-spacing="6">SHAMCHESTER CITY</text>
       </svg>
       <h1>Sham<span>chester</span> City</h1>
     </div>
-    <p class="deck">A satirical brief on the charges — not a prediction of the punishment.</p>
+    <p class="deck">The Premier League charges against Manchester City, laid out plainly.</p>
     <nav class="nav-mini" aria-label="Sections">
       <a href="#counter">The counter</a>
       <a href="#timeline">Timeline</a>
