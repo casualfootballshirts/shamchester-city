@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7958422514905143" crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFEL864LGT"></script>
 <script>
@@ -215,9 +216,10 @@
     background: var(--newsprint); outline: none;
   }
   .club-toggle:focus-visible { box-shadow: inset 0 0 0 2px #1C2C5B; }
-  .club-head {
+  .club-head h3 {
     display: flex; flex-wrap: wrap; justify-content: space-between;
     align-items: baseline; gap: 0.35rem 1rem;
+    width: 100%; margin: 0; font-weight: inherit;
   }
   .club-name {
     font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin: 0;
@@ -375,8 +377,7 @@
 <section id="filters">
   <div class="wrap">
     <p class="section-label">Filter</p>
-    <h2>By club</h2>
-    <p class="lede">Pick a club to see only their rows. The totals above update straight away.</p>
+    <h2>Manchester City’s estimated damages club by club</h2>
     <div class="filter-row">
       <label for="teamFilter">Club</label>
       <select id="teamFilter"></select>
@@ -620,8 +621,10 @@
         '<button type="button" class="club-toggle" aria-expanded="' + (isOpen ? "true" : "false") +
         '" aria-controls="' + id + '">' +
           '<div class="club-head">' +
-            '<p class="club-name"><span class="chev" aria-hidden="true"></span>' + g.club + "</p>" +
-            '<div class="club-total">' + gbpExact(g.total) + "</div>" +
+            '<h3>' +
+              '<span class="club-name"><span class="chev" aria-hidden="true"></span>' + g.club + "</span>" +
+              '<span class="club-total">' + gbpExact(g.total) + "</span>" +
+            "</h3>" +
           "</div>" +
           '<p class="club-meta">' + g.lines.length + " line" + (g.lines.length === 1 ? "" : "s") +
             " across seasons · tap to " + (isOpen ? "collapse" : "expand") + "</p>" +
