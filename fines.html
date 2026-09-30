@@ -190,35 +190,93 @@
     font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.04em;
     color: var(--muted); margin-bottom: 1rem;
   }
-  .line {
-    border: 1px solid #C5D9EB; border-left: 4px solid #6CABDD;
-    padding: 0.9rem 1rem; margin-bottom: 0.65rem; background: #fff;
+  .club-row {
+    border: 1px solid #C5D9EB;
+    border-left: 4px solid #6CABDD;
+    background: #fff;
+    margin-bottom: 0.55rem;
   }
-  .line.r-finished_below { border-left-color: #6CABDD; }
-  .line.r-pushed_cl, .line.r-pushed_europe { border-left-color: #1C2C5B; }
-  .line.r-lost_title { border-left-color: #3A7CA5; }
-  .line.r-reputational { border-left-color: #8b1e1e; }
-  .line.r-cup_final { border-left-color: #0f5132; }
-  .line-top {
-    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.35rem 1rem;
-    align-items: baseline;
+  .club-toggle {
+    display: block; width: 100%; text-align: left;
+    background: transparent; border: 0; color: inherit;
+    padding: 0.85rem 1rem; cursor: pointer;
   }
-  .line-club {
-    font-family: var(--serif); font-size: 1.1rem; font-weight: 700; margin: 0;
+  .club-toggle:hover, .club-toggle:focus-visible {
+    background: var(--newsprint); outline: none;
   }
-  .line-total {
-    font-family: var(--mono); font-weight: 700; font-size: 0.95rem; color: var(--sky-deep);
+  .club-toggle:focus-visible { box-shadow: inset 0 0 0 2px #1C2C5B; }
+  .club-head {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    align-items: baseline; gap: 0.35rem 1rem;
   }
-  .line-label { margin: 0.35rem 0 0.55rem; font-size: 0.9rem; color: #3a3832; }
-  .line-grid {
+  .club-name {
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin: 0;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .club-name .chev {
+    display: inline-block; width: 0.55rem; height: 0.55rem;
+    border-right: 2px solid #1C2C5B; border-bottom: 2px solid #1C2C5B;
+    transform: rotate(-45deg); transition: transform 0.18s ease;
+    flex-shrink: 0;
+  }
+  .club-row.open .club-name .chev { transform: rotate(45deg); }
+  .club-total {
+    font-family: var(--mono); font-weight: 700; font-size: 1rem; color: var(--sky-deep);
+  }
+  .club-meta {
+    margin: 0.25rem 0 0; font-size: 0.8rem; color: var(--muted);
+  }
+  .club-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem;
-    font-size: 0.8rem;
+    margin-top: 0.7rem; font-size: 0.82rem;
   }
   @media (max-width: 700px) {
-    .line-grid { grid-template-columns: 1fr 1fr; }
+    .club-grid { grid-template-columns: 1fr 1fr; }
   }
-  .line-grid span { display: block; font-family: var(--mono); font-size: 0.65rem;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .club-grid span {
+    display: block; font-family: var(--mono); font-size: 0.65rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
+  .club-detail {
+    display: none;
+    border-top: 1px solid #C5D9EB;
+    background: var(--newsprint);
+    padding: 0.65rem 0.75rem 0.85rem;
+  }
+  .club-row.open .club-detail { display: block; }
+  .detail-line {
+    background: #fff; border: 1px solid #C5D9EB;
+    border-left: 3px solid #6CABDD;
+    padding: 0.7rem 0.85rem; margin-bottom: 0.45rem;
+  }
+  .detail-line.r-finished_below { border-left-color: #6CABDD; }
+  .detail-line.r-pushed_cl, .detail-line.r-pushed_europe { border-left-color: #1C2C5B; }
+  .detail-line.r-lost_title { border-left-color: #3A7CA5; }
+  .detail-line.r-reputational { border-left-color: #8b1e1e; }
+  .detail-line.r-cup_final { border-left-color: #0f5132; }
+  .detail-top {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    gap: 0.25rem 0.75rem; align-items: baseline;
+  }
+  .detail-season {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--sky-deep); font-weight: 700;
+  }
+  .detail-amt {
+    font-family: var(--mono); font-size: 0.85rem; font-weight: 700; color: var(--ink);
+  }
+  .detail-label { margin: 0.3rem 0 0.5rem; font-size: 0.88rem; color: #3a3832; }
+  .detail-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.35rem;
+    font-size: 0.78rem;
+  }
+  @media (max-width: 700px) {
+    .detail-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .detail-grid span {
+    display: block; font-family: var(--mono); font-size: 0.62rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
   .empty {
     padding: 2rem; text-align: center; color: var(--muted);
     border: 1px dashed #C5D9EB;
@@ -356,8 +414,9 @@
 
 <section id="breakdown">
   <div class="wrap">
-    <p class="section-label">Line by line</p>
+    <p class="section-label">By club</p>
     <h2>Breakdown</h2>
+    <p class="lede">One row per club, highest claim first. Tap a club to open the season-by-season lines inside.</p>
     <div class="meta-bar">
       <span id="metaCount"></span>
       <span id="metaAsOf"></span>
@@ -494,33 +553,114 @@
     document.getElementById("bigTotal").textContent = gbp(t);
   }
 
+  var openClubs = {};
+
+  function groupByClub(list) {
+    var map = {};
+    list.forEach(function (r) {
+      if (!map[r.club]) {
+        map[r.club] = {
+          club: r.club, lines: [], principal: 0, interest: 0, total: 0,
+          maxDays: 0, earliestStart: r.start
+        };
+      }
+      var g = map[r.club];
+      g.lines.push(r);
+      g.principal += r.principal;
+      g.interest += r.interest;
+      g.total += r.total;
+      if (r.days > g.maxDays) g.maxDays = r.days;
+      if (r.start < g.earliestStart) g.earliestStart = r.start;
+    });
+    var groups = Object.keys(map).map(function (k) { return map[k]; });
+    groups.sort(function (a, b) { return b.total - a.total; });
+    groups.forEach(function (g) {
+      g.lines.sort(function (a, b) {
+        if (a.season !== b.season) return a.season < b.season ? 1 : -1;
+        return a.rule.localeCompare(b.rule);
+      });
+    });
+    return groups;
+  }
+
+  function formatStart(iso) {
+    var d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  }
+
   function renderLines(list) {
     var box = document.getElementById("lines");
-    document.getElementById("metaCount").textContent = list.length + " line item" + (list.length === 1 ? "" : "s");
-    if (!list.length) {
-      box.innerHTML = '<div class="empty">No lines for this filter.</div>';
+    var groups = groupByClub(list);
+    var lineCount = list.length;
+    document.getElementById("metaCount").textContent =
+      groups.length + " club" + (groups.length === 1 ? "" : "s") +
+      " · " + lineCount + " line item" + (lineCount === 1 ? "" : "s");
+    if (!groups.length) {
+      box.innerHTML = '<div class="empty">No clubs for this filter.</div>';
       return;
     }
-    list.sort(function (a, b) {
-      if (a.season !== b.season) return a.season < b.season ? 1 : -1;
-      if (a.club !== b.club) return a.club.localeCompare(b.club, "en-GB");
-      return a.rule.localeCompare(b.rule);
-    });
     var html = "";
-    list.forEach(function (r) {
-      html += '<article class="line r-' + r.rule + '">' +
-        '<div class="line-top"><p class="line-club">' + r.club +
-        ' <span style="font-weight:400;font-size:0.85rem;color:#4A5F7A">· ' + r.season + '</span></p>' +
-        '<div class="line-total">' + gbpExact(r.total) + '</div></div>' +
-        '<p class="line-label">' + r.label + '</p>' +
-        '<div class="line-grid">' +
-          '<div><span>Principal</span>' + gbp(r.principal) + '</div>' +
-          '<div><span>Days of interest</span>' + r.days.toLocaleString("en-GB") + '</div>' +
-          '<div><span>Interest</span>' + gbpExact(r.interest) + '</div>' +
-          '<div><span>Line total</span>' + gbpExact(r.total) + '</div>' +
-        '</div></article>';
+    groups.forEach(function (g, idx) {
+      var isOpen = !!openClubs[g.club];
+      var id = "club-panel-" + idx;
+      html += '<article class="club-row' + (isOpen ? " open" : "") + '" data-club="' +
+        g.club.replace(/"/g, "&quot;") + '">' +
+        '<button type="button" class="club-toggle" aria-expanded="' + (isOpen ? "true" : "false") +
+        '" aria-controls="' + id + '">' +
+          '<div class="club-head">' +
+            '<p class="club-name"><span class="chev" aria-hidden="true"></span>' + g.club + "</p>" +
+            '<div class="club-total">' + gbpExact(g.total) + "</div>" +
+          "</div>" +
+          '<p class="club-meta">' + g.lines.length + " line" + (g.lines.length === 1 ? "" : "s") +
+            " across seasons · tap to " + (isOpen ? "collapse" : "expand") + "</p>" +
+          '<div class="club-grid">' +
+            "<div><span>Principal</span>" + gbp(g.principal) + "</div>" +
+            "<div><span>Longest interest run</span>" + g.maxDays.toLocaleString("en-GB") +
+              " days <span style=\"display:inline;text-transform:none;letter-spacing:0;font-family:inherit;font-size:0.75rem;color:#4A5F7A\">(from " +
+              formatStart(g.earliestStart) + ")</span></div>" +
+            "<div><span>Interest</span>" + gbpExact(g.interest) + "</div>" +
+            "<div><span>Club total</span>" + gbpExact(g.total) + "</div>" +
+          "</div>" +
+        "</button>" +
+        '<div class="club-detail" id="' + id + '"' + (isOpen ? "" : " hidden") + ">";
+      g.lines.forEach(function (r) {
+        html += '<div class="detail-line r-' + r.rule + '">' +
+          '<div class="detail-top">' +
+            '<span class="detail-season">' + r.season + "</span>" +
+            '<span class="detail-amt">' + gbpExact(r.total) + "</span>" +
+          "</div>" +
+          '<p class="detail-label">' + r.label + "</p>" +
+          '<div class="detail-grid">' +
+            "<div><span>Principal</span>" + gbp(r.principal) + "</div>" +
+            "<div><span>Days of interest</span>" + r.days.toLocaleString("en-GB") + "</div>" +
+            "<div><span>Interest</span>" + gbpExact(r.interest) + "</div>" +
+            "<div><span>Line total</span>" + gbpExact(r.total) + "</div>" +
+          "</div></div>";
+      });
+      html += "</div></article>";
     });
     box.innerHTML = html;
+    Array.prototype.forEach.call(box.querySelectorAll(".club-toggle"), function (btn) {
+      btn.addEventListener("click", function () {
+        var row = btn.closest(".club-row");
+        var club = row.getAttribute("data-club");
+        var panel = row.querySelector(".club-detail");
+        var nowOpen = !row.classList.contains("open");
+        row.classList.toggle("open", nowOpen);
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+        if (panel) {
+          if (nowOpen) panel.removeAttribute("hidden");
+          else panel.setAttribute("hidden", "");
+        }
+        openClubs[club] = nowOpen;
+        var meta = row.querySelector(".club-meta");
+        if (meta) {
+          var n = row.querySelectorAll(".detail-line").length;
+          meta.textContent = n + " line" + (n === 1 ? "" : "s") +
+            " across seasons · tap to " + (nowOpen ? "collapse" : "expand");
+        }
+      });
+    });
   }
 
   function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
