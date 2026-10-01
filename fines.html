@@ -302,6 +302,37 @@
   .notes ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
   .notes a { word-break: break-all; }
 
+
+  .amazon-banner {
+    background: #F4F8FC;
+    border-top: 1px solid #C5D9EB;
+    border-bottom: 1px solid #C5D9EB;
+    padding: 1.4rem 0;
+  }
+  .amazon-banner .inner {
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 1rem;
+  }
+  .amazon-banner .copy { max-width: 34rem; }
+  .amazon-banner .kicker {
+    font-family: var(--mono, ui-monospace, monospace);
+    font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #4A5F7A; margin: 0 0 0.25rem;
+  }
+  .amazon-banner .title {
+    font-family: var(--serif, Georgia, serif);
+    font-size: 1.2rem; font-weight: 700; color: #1C2C5B; margin: 0 0 0.3rem;
+  }
+  .amazon-banner .disc {
+    margin: 0; font-size: 0.78rem; color: #4A5F7A;
+  }
+  .amazon-banner a.btn {
+    display: inline-block; background: #6CABDD; color: #1C2C5B !important;
+    font-weight: 700; text-decoration: none; padding: 0.7rem 1.1rem;
+    border: 2px solid #1C2C5B; white-space: nowrap;
+  }
+  .amazon-banner a.btn:hover { background: #1C2C5B; color: #fff !important; }
+
   footer.site-foot {
     background: #1C2C5B; color: #D6E8F5; padding: 2rem 0 2.5rem;
     font-size: 0.88rem; border-top: 4px solid #6CABDD;
@@ -442,6 +473,20 @@
       <a href="http://www.englishfootballstats.co.uk/Level%201%20Tables/2017-18.htm" target="_blank" rel="noopener noreferrer">2017–18 final table</a> ·
       <a href="https://www.nbcsports.com/soccer/news/manchester-city-trophy-history-list-of-finals-played-silverware-won-by-man-city" target="_blank" rel="noopener noreferrer">City cup final history</a>
     </p>
+  </div>
+</section>
+
+
+<section class="amazon-banner" aria-label="Amazon affiliate">
+  <div class="wrap">
+    <div class="inner">
+      <div class="copy">
+        <p class="kicker">Amazon</p>
+        <p class="title">Shop football shirts on Amazon</p>
+        <p class="disc">As an Amazon Associate I earn from qualifying purchases.</p>
+      </div>
+      <a class="btn" href="https://www.amazon.co.uk/s?k=football+shirts&amp;tag=casualfootbal-21" target="_blank" rel="noopener noreferrer sponsored">Browse on Amazon</a>
+    </div>
   </div>
 </section>
 
